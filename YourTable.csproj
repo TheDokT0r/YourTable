@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{23030215-E642-4048-BF88-A3F5AB6B5489}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>YourTable</RootNamespace>
+    <AssemblyName>YourTable</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Data.Sqlite, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Sqlite.Core.6.0.0-preview.6.21352.1\lib\netstandard2.0\Microsoft.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2, Version=2.0.5.1236, Culture=neutral, PublicKeyToken=8226ea5df37bcae9, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_e_sqlite3.2.0.5-pre20210521085756\lib\net461\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core, Version=2.0.5.1236, Culture=neutral, PublicKeyToken=1488e028ca7ab535, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.core.2.0.5-pre20210521085756\lib\netstandard2.0\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.e_sqlite3, Version=2.0.5.1236, Culture=neutral, PublicKeyToken=9c301db686d0bd12, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.provider.e_sqlite3.2.0.5-pre20210521085756\lib\netstandard2.0\SQLitePCLRaw.provider.e_sqlite3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.114.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.114.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\AddTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\AddTask.Designer.cs">
+      <DependentUpon>AddTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\BusyHours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\BusyHours.Designer.cs">
+      <DependentUpon>BusyHours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\CaculateDates.cs" />
+    <Compile Include="src\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Month.cs" />
+    <Compile Include="src\Op.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Op.Designer.cs">
+      <DependentUpon>Op.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Json_File.cs" />
+    <Compile Include="src\Options.cs" />
+    <Compile Include="src\Questions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Questions.Designer.cs">
+      <DependentUpon>Questions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Calender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Calender.Designer.cs">
+      <DependentUpon>Calender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Stickers.cs" />
+    <Compile Include="src\DBMannager.cs" />
+    <Compile Include="src\TasksList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\TasksList.Designer.cs">
+      <DependentUpon>TasksList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Task_Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Task_Information.Designer.cs">
+      <DependentUpon>Task_Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Timetable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Timetable.Designer.cs">
+      <DependentUpon>Timetable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\User.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="src\AddTask.resx">
+      <DependentUpon>AddTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\BusyHours.resx">
+      <DependentUpon>BusyHours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Op.resx">
+      <DependentUpon>Op.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Questions.resx">
+      <DependentUpon>Questions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Calender.resx">
+      <DependentUpon>Calender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\TasksList.resx">
+      <DependentUpon>TasksList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Task_Information.resx">
+      <DependentUpon>Task_Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Timetable.resx">
+      <DependentUpon>Timetable.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\x86\Debug\data\Tasks.db" />
+    <None Include="bin\x86\Debug\data\user_data.json" />
+    <None Include="bin\x86\Debug\img\back btn.psd" />
+    <None Include="bin\x86\Debug\img\btn new tasks.psd" />
+    <None Include="bin\x86\Debug\img\busy hours btn.psd" />
+    <None Include="bin\x86\Debug\img\info btn.psd" />
+    <None Include="bin\x86\Debug\img\info logo.psd" />
+    <None Include="bin\x86\Debug\img\manu-back 2.psd" />
+    <None Include="bin\x86\Debug\img\manu-back.psd" />
+    <None Include="bin\x86\Debug\img\Next btn.psd" />
+    <None Include="bin\x86\Debug\img\op-background.psd" />
+    <None Include="bin\x86\Debug\img\Some questions before we begin.psd" />
+    <None Include="bin\x86\Debug\img\timetable btn.psd" />
+    <None Include="bin\x86\Debug\img\Your calender background.psd" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Json_File.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="0 - Notes.txt" />
+    <Content Include="bin\x86\Debug\data\hasOpened.txt" />
+    <Content Include="bin\x86\Debug\data\tips.txt" />
+    <Content Include="bin\x86\Debug\img\back btn.png" />
+    <Content Include="bin\x86\Debug\img\btn new tasks.png" />
+    <Content Include="bin\x86\Debug\img\busy hours btn.png" />
+    <Content Include="bin\x86\Debug\img\info btn.png" />
+    <Content Include="bin\x86\Debug\img\info logo.png" />
+    <Content Include="bin\x86\Debug\img\manu-back 2.png" />
+    <Content Include="bin\x86\Debug\img\manu-back.png" />
+    <Content Include="bin\x86\Debug\img\Next btn.png" />
+    <Content Include="bin\x86\Debug\img\notebook lines.png" />
+    <Content Include="bin\x86\Debug\img\op-background.png" />
+    <Content Include="bin\x86\Debug\img\pink background.png" />
+    <Content Include="bin\x86\Debug\img\Some questions before we begin.png" />
+    <Content Include="bin\x86\Debug\img\Stickers\1.png" />
+    <Content Include="bin\x86\Debug\img\Stickers\2.png" />
+    <Content Include="bin\x86\Debug\img\Stickers\3.png" />
+    <Content Include="bin\x86\Debug\img\Stickers\4.png" />
+    <Content Include="bin\x86\Debug\img\Stickers\5.png" />
+    <Content Include="bin\x86\Debug\img\Stickers\6.png" />
+    <Content Include="bin\x86\Debug\img\Stickers\7.png" />
+    <Content Include="bin\x86\Debug\img\timetable btn.png" />
+    <Content Include="bin\x86\Debug\img\Your calender background.png" />
+    <Content Include="bin\x86\Debug\img\YourTable main text 2.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.114.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.114.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.114.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.114.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+</Project>

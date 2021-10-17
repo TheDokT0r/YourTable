@@ -1,0 +1,14 @@
+E:\GHIS\Computer Science\IA\YourTable\YourTable\bin\Release\YourTable.exe.config
+E:\GHIS\Computer Science\IA\YourTable\YourTable\bin\Release\YourTable.exe
+E:\GHIS\Computer Science\IA\YourTable\YourTable\bin\Release\YourTable.pdb
+E:\GHIS\Computer Science\IA\YourTable\YourTable\bin\Release\Newtonsoft.Json.dll
+E:\GHIS\Computer Science\IA\YourTable\YourTable\bin\Release\Newtonsoft.Json.xml
+E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Release\YourTable.Properties.Resources.resources
+E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Release\YourTable.src.Op.resources
+E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Release\YourTable.csproj.GenerateResource.cache
+E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Release\YourTable.csproj.CoreCompileInputs.cache
+E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Release\YourTable.csproj.CopyComplete
+E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Release\YourTable.exe
+E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Release\YourTable.pdb
+E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Release\YourTable.Questions.resources
+E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Release\YourTable.csprojAssemblyReference.cache

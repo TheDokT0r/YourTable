@@ -17,8 +17,9 @@ namespace YourTable
 
         public Json_File()
         {
-            //path = @"E:\GHIS\Computer Science\IA\YourTable\YourTable\data\user_data.json";
-            path = @".\data\user_data.json";
+            //string localAppData = Environment.GetEnvironmentVariable("LocalAppData");
+            string localAppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            path = localAppData + @"\YT_Data\user_data.json";
             size = arraySize();
         }
 

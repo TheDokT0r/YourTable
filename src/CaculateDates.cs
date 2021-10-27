@@ -49,7 +49,7 @@ namespace YourTable
 
             if (!user.workInARow)
             {
-                prefarableDates = WorkInARow(prefarableDates);
+                //prefarableDates = WorkInARow(prefarableDates);
             }
 
             prefarableDates = HoursOfWork(prefarableDates);
@@ -70,11 +70,14 @@ namespace YourTable
             }
 
 
+            var a = prefarableDates; //just to check something in debug...
+
             prefarableDates = DevideBetweenDays(prefarableDates);
 
             List<DateTime> extraHours = freeDates; //Just a better name I guess
 
             List<DateTime> finalHours = AddRemoveExtraHours(prefarableDates, extraHours, timeTakeHours);
+            
 
             return finalHours;
         }
@@ -236,16 +239,6 @@ namespace YourTable
         {
             int counter = 0;
             DateTime prevDate = new DateTime(1, 1, 1, 0, 0, 0);
-
-            /*foreach(DateTime date in dt)
-            {
-                if (date.Day != prevDate.Day)
-                {
-                    prevDate = date;
-                    counter++;
-                }
-            }*/
-
 
             counter = dt.Count;
 

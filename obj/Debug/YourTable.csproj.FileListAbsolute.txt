@@ -42,3 +42,6 @@ E:\GHIS\Computer Science\IA\YourTable\YourTable\bin\Debug\System.Data.SQLite.dll
 E:\GHIS\Computer Science\IA\YourTable\YourTable\bin\Debug\System.Data.SQLite.xml
 E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Debug\YourTable.AddTask.resources
 E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Debug\YourTable.Timetable.resources
+E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Debug\YourTable.BusyHours.resources
+E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Debug\YourTable.TasksList.resources
+E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Debug\YourTable.Task_Information.resources

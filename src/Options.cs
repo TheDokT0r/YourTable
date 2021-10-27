@@ -21,9 +21,16 @@ namespace YourTable
 
         public bool checkHackerMode()
         {
-            string path = @".\data\gamer.png";
+            //string localAppData = Environment.GetEnvironmentVariable("LocalAppData");
+            string localAppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string path = localAppData + @"\YT_Data\gamer.png";
             string txt = File.ReadAllText(path);
 
+
+            /*
+             *Oh no, you've found me! This is not an image file!
+             *Well then, you better find the secret code now ;)
+             */
             if (txt.ToLower() == "it's gaming time")
             {
                 return true;
@@ -35,7 +42,9 @@ namespace YourTable
 
         public bool hasOpened()
         {
-            string path = @".\data\hasOpened";
+            //string localAppData = Environment.GetEnvironmentVariable("LocalAppData");
+            string localAppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string path = localAppData + @"\YT_Data\hasOpened";
             string txt = File.ReadAllText(path);
 
             if (txt.ToLower() != "1")

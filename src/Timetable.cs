@@ -42,7 +42,7 @@ namespace YourTable
                 btn_Reset.Visible = true;
             }
 
-            lbl_tip.Text = GetTip(); //Set the tip... That's quite ob
+            //lbl_tip.Text = GetTip(); //Set the tip... That's quite ob
 
             lbl_title.Text = currentDate.Date.ToString();
 
@@ -143,7 +143,7 @@ namespace YourTable
             options.CloseProgram();
         }
 
-        string GetTip()
+        /*string GetTip()
         {
             string path = @".\data\tips.txt";
             string[] lines = File.ReadAllLines(path);
@@ -152,7 +152,7 @@ namespace YourTable
             int num = rnd.Next(0, lines.Length);
 
             return lines[num];
-        }
+        }*/
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {

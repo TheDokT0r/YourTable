@@ -2,7 +2,7 @@
   {
     "main": "name",
     "question": "What's your name",
-    "answer": "Emma",
+    "answer": "t",
     "options": [
       "null"
     ]
@@ -10,7 +10,7 @@
   {
     "main": "age",
     "question": "How old are you",
-    "answer": "15",
+    "answer": "16",
     "options": [
       "15",
       "16",
@@ -23,7 +23,7 @@
   {
     "main": "timeOfDay",
     "question": "At what times of the day\nDo you prefer to work at?",
-    "answer": "Morning",
+    "answer": "Afternoon",
     "options": [
       "Morning",
       "Afternoon",
@@ -33,7 +33,7 @@
   {
     "main": "prefarableHoursToWork",
     "question": "How much time would you \nlike to work every day",
-    "answer": "7 hours",
+    "answer": "3 hours",
     "options": [
       "2 hours",
       "3 hours",
@@ -56,7 +56,7 @@
   {
     "main": "wayOfWork",
     "question": "Do you prefer to work on each task\na couple of hours in a\nrow or in different times",
-    "answer": "in a row",
+    "answer": "different times",
     "options": [
       "in a row",
       "different times"

@@ -1,4 +1,6 @@
-﻿-TODO: Add an option in the User information, that after the information on the user had change, it would update all of his timetables
+﻿-IMPORTANT: You may need this shit in the future to create setup files: https://stackoverflow.com/questions/8354594/how-to-install-a-file-in-app-data-in-setup-project-c
+
+-TODO: Add an option in the User information, that after the information on the user had change, it would update all of his timetables
 	   so they would feat with the new data.
 
 -TODO: Use this shit to make a loading screen or something idk: https://www.c-sharpcorner.com/article/async-and-await-in-c-sharp/

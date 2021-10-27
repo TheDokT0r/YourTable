@@ -74,13 +74,20 @@ namespace YourTable
 
         private void btn_deleateTask_Click(object sender, EventArgs e)
         {
-            int index = lbx_tasks.SelectedIndex;
-            int taskID = Convert.ToInt32(tasks[index]["taskID"]);
+            try
+            {
+                int index = lbx_tasks.SelectedIndex;
+                int taskID = Convert.ToInt32(tasks[index]["taskID"]);
 
-            DBMannager db = new DBMannager();
-            db.DeleteTask(taskID);
+                DBMannager db = new DBMannager();
+                db.DeleteTask(taskID);
 
-            GetAllTasks(); //Just to reset the text
+                GetAllTasks(); //Just to reset the text
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
 

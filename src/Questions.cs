@@ -131,7 +131,8 @@ namespace YourTable
                 m.Show();
                 Hide();
 
-                string path = @"data/hasOpened.txt"; //HasOpened = ture
+                string localAppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+                string path = localAppData + @"/YT_Data/hasOpened.txt"; //HasOpened = ture
                 File.WriteAllText(path, "1");
             }
         }

@@ -30,9 +30,12 @@ namespace YourTable
 
         public DBMannager()
         {
-            path = @"Data Source=.\data\Tasks.db";
-            //cs = @"URI=file:" + Application.StartupPath + "\\data\\Tasks.db"; //creates debug folder
-            cs = @"URI=file:" + @".\data\Tasks.db"; //creates debug folder
+            //string localAppData = Environment.GetEnvironmentVariable("LocalAppData");
+            string localAppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            //path = @"Data Source=.\data\Tasks.db";
+            path = @"Data Source = " + localAppData + @"\YT_Data\Tasks.db";
+            //cs = @"URI=file:" + @".\data\Tasks.db"; //creates debug folder
+            cs = @"URI=file:" + localAppData + @"\YT_Data\Tasks.db";
 
             dates = new List<string>();
         }

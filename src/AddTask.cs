@@ -67,8 +67,6 @@ namespace YourTable
 
         bool CheckErrors(string name, int hour, int priority, string date)
         {
-            lbl_error.Text = ""; //Resets the error
-
             List<string> errors = new List<string>();
 
             if (DateTime.Parse(date).Date < DateTime.Now.Date)
@@ -89,13 +87,14 @@ namespace YourTable
 
             if (errors.Count > 0) //Check if there are any errors
             {
-                lbl_error.Text = "ERROR: ";
-                foreach (string error in errors)
-                    lbl_error.Text += " " + error;
+                string errorList = "";
 
-                lbl_error.Visible = true;
+                foreach(string error in errors)
+                {
+                    errorList = errorList + ", " + error;
+                }
 
-                return true;
+                MessageBox.Show(errorList, "Error", MessageBoxButtons.OK);
             }
 
             return false;

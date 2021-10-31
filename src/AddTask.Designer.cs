@@ -38,7 +38,6 @@
             this.cmb_priority = new System.Windows.Forms.ComboBox();
             this.dt_complition = new System.Windows.Forms.DateTimePicker();
             this.btn_done = new System.Windows.Forms.Button();
-            this.lbl_error = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
             this.img_sticker = new System.Windows.Forms.PictureBox();
             this.lbl_hour = new System.Windows.Forms.Label();
@@ -161,20 +160,6 @@
             this.btn_done.UseVisualStyleBackColor = false;
             this.btn_done.Click += new System.EventHandler(this.btn_done_Click);
             // 
-            // lbl_error
-            // 
-            this.lbl_error.AutoSize = true;
-            this.lbl_error.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_error.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_error.ForeColor = System.Drawing.Color.Red;
-            this.lbl_error.Location = new System.Drawing.Point(103, 151);
-            this.lbl_error.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_error.Name = "lbl_error";
-            this.lbl_error.Size = new System.Drawing.Size(199, 29);
-            this.lbl_error.TabIndex = 10;
-            this.lbl_error.Text = "error placeholder";
-            this.lbl_error.Visible = false;
-            // 
             // btn_back
             // 
             this.btn_back.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -232,7 +217,6 @@
             this.Controls.Add(this.lbl_hour);
             this.Controls.Add(this.img_sticker);
             this.Controls.Add(this.btn_back);
-            this.Controls.Add(this.lbl_error);
             this.Controls.Add(this.btn_done);
             this.Controls.Add(this.dt_complition);
             this.Controls.Add(this.cmb_priority);
@@ -267,7 +251,6 @@
         private System.Windows.Forms.ComboBox cmb_priority;
         private System.Windows.Forms.DateTimePicker dt_complition;
         private System.Windows.Forms.Button btn_done;
-        private System.Windows.Forms.Label lbl_error;
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.PictureBox img_sticker;
         private System.Windows.Forms.Label lbl_hour;

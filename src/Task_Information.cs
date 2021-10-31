@@ -36,6 +36,9 @@ namespace YourTable
 
         private void Task_Information_Load(object sender, EventArgs e)
         {
+            Stickers s = new Stickers();
+            img_sticker.ImageLocation = s.GetRandom();
+
             lbl_name.Text = "Name : " + name;
             lbl_completionDate.Text = "Completion Date: " + completionDate;
 

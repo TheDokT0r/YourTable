@@ -256,6 +256,7 @@
     <Content Include="bin\x86\Debug\img\timetable btn.png" />
     <Content Include="bin\x86\Debug\img\Your calender background.png" />
     <Content Include="bin\x86\Debug\img\YourTable main text 2.png" />
+    <None Include="img\easterEgg.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

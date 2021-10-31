@@ -33,6 +33,10 @@ namespace YourTable
 
         private void Questions_Load(object sender, EventArgs e)
         {
+            Stickers s = new Stickers();
+            img_sticker.ImageLocation = s.GetRandom();
+
+
             Next();
             jCounter++;
 

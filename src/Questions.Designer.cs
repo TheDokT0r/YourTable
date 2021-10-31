@@ -34,7 +34,9 @@
             this.btn_next = new System.Windows.Forms.Button();
             this.cmb_options = new System.Windows.Forms.ComboBox();
             this.btn_cancel = new System.Windows.Forms.Button();
+            this.img_sticker = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.img_title)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_sticker)).BeginInit();
             this.SuspendLayout();
             // 
             // img_title
@@ -115,6 +117,16 @@
             this.btn_cancel.UseVisualStyleBackColor = false;
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
+            // img_sticker
+            // 
+            this.img_sticker.BackColor = System.Drawing.Color.Transparent;
+            this.img_sticker.Location = new System.Drawing.Point(786, 336);
+            this.img_sticker.Name = "img_sticker";
+            this.img_sticker.Size = new System.Drawing.Size(269, 206);
+            this.img_sticker.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.img_sticker.TabIndex = 7;
+            this.img_sticker.TabStop = false;
+            // 
             // Questions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -122,6 +134,7 @@
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.BackgroundImage = global::YourTable.Properties.Resources.pink_background;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.img_sticker);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.cmb_options);
             this.Controls.Add(this.btn_next);
@@ -136,6 +149,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Questios_Close);
             this.Load += new System.EventHandler(this.Questions_Load);
             ((System.ComponentModel.ISupportInitialize)(this.img_title)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_sticker)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,5 +162,6 @@
         private System.Windows.Forms.Button btn_next;
         private System.Windows.Forms.ComboBox cmb_options;
         private System.Windows.Forms.Button btn_cancel;
+        private System.Windows.Forms.PictureBox img_sticker;
     }
 }

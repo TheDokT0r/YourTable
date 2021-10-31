@@ -31,12 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.tmr_fade = new System.Windows.Forms.Timer(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.img_background = new System.Windows.Forms.PictureBox();
             this.btn_continue = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.lbl_ver = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.img_background)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.img_background = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_background)).BeginInit();
             this.SuspendLayout();
             // 
             // tmr_fade
@@ -49,17 +51,6 @@
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // img_background
-            // 
-            this.img_background.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.img_background.Image = global::YourTable.Properties.Resources.op_background;
-            this.img_background.Location = new System.Drawing.Point(0, 0);
-            this.img_background.Margin = new System.Windows.Forms.Padding(4);
-            this.img_background.Name = "img_background";
-            this.img_background.Size = new System.Drawing.Size(612, 690);
-            this.img_background.TabIndex = 0;
-            this.img_background.TabStop = false;
             // 
             // btn_continue
             // 
@@ -89,12 +80,35 @@
             this.lbl_ver.TabIndex = 3;
             this.lbl_ver.Text = "Version 1.0: Heros";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::YourTable.Properties.Resources.easterEgg;
+            this.pictureBox1.Location = new System.Drawing.Point(721, 150);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(430, 230);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // img_background
+            // 
+            this.img_background.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.img_background.Image = global::YourTable.Properties.Resources.op_background;
+            this.img_background.Location = new System.Drawing.Point(0, 0);
+            this.img_background.Margin = new System.Windows.Forms.Padding(4);
+            this.img_background.Name = "img_background";
+            this.img_background.Size = new System.Drawing.Size(605, 690);
+            this.img_background.TabIndex = 0;
+            this.img_background.TabStop = false;
+            // 
             // Op
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(612, 690);
+            this.ClientSize = new System.Drawing.Size(605, 690);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbl_ver);
             this.Controls.Add(this.btn_continue);
             this.Controls.Add(this.img_background);
@@ -106,8 +120,9 @@
             this.Text = "Op";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Op_Close);
             this.Load += new System.EventHandler(this.Op_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.img_background)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_background)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,5 +136,6 @@
         private System.Windows.Forms.Button btn_continue;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label lbl_ver;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

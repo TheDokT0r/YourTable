@@ -79,14 +79,28 @@ namespace YourTable
                 int index = lbx_tasks.SelectedIndex;
                 int taskID = Convert.ToInt32(tasks[index]["taskID"]);
 
-                DBMannager db = new DBMannager();
-                db.DeleteTask(taskID);
+                string title = "Important";
+                string msg = "Are you sure that you want to delete the following task? You'll have no way of recovering it";
+                var results = MessageBox.Show(msg, title, MessageBoxButtons.YesNo);
 
-                GetAllTasks(); //Just to reset the text
+                if(results == DialogResult.Yes)
+                {
+                    DBMannager db = new DBMannager();
+                    db.DeleteTask(taskID);
+
+                    GetAllTasks(); //Just to reset the text
+                }
             }
             catch(Exception ex)
             {
                 Console.WriteLine(ex);
+
+                Options options = new Options();
+
+                if(options.checkHackerMode())
+                {
+                    MessageBox.Show(e.ToString(), "Error!", MessageBoxButtons.OK);
+                }
             }
         }
 

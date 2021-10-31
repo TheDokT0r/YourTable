@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace YourTable
 {
@@ -176,8 +177,7 @@ namespace YourTable
                 string message = "It seems like you don't have enough time left to complete this task!";
                 string title = "Error";
 
-                MessageBox messageBox = new MessageBox(title, message);
-                messageBox.Show();
+                MessageBox.Show(message, title, MessageBoxButtons.OK);
             }
 
             while (prefarableDates.Count > taskHoursNeeded) //Too many hours

@@ -24,15 +24,18 @@ namespace YourTable
 
         private void BusyHours_Load(object sender, EventArgs e)
         {
-
         }
 
 
 
         private void btn_confirm_Click(object sender, EventArgs e)
         {
-            lbl_loading.Visible = true;
-
+            //lbl_loading.Visible = true;
+            string title = "Loading";
+            string msg = "The program is loading your changes, it might take a second. Please do not press your program until the proccess is done!";
+            MessageBoxButtons button = MessageBoxButtons.OK;
+            MessageBox.Show(msg, title, button);
+            
             name = txt_name.Text;
             hour1 = int.Parse(txt_hour1.Text);
             hour2 = int.Parse(txt_hour2.Text);
@@ -125,6 +128,15 @@ namespace YourTable
             Menu m = new Menu();
             m.Show();
             Hide();
+        }
+
+        private void btn_reset_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Resets your data, might take a second...", "Loading", MessageBoxButtons.OK);
+
+            DBMannager db = new DBMannager();
+
+            db.DeleteBusyHours();
         }
 
         private void BusyHours_FormClosing(object sender, FormClosingEventArgs e)

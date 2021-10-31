@@ -436,5 +436,16 @@ namespace YourTable
                 }
             }
         }
+
+
+        public void DeleteBusyHours()
+        {
+            using (var con = new SQLiteConnection(cs))
+            using (var comm = new SQLiteCommand("DELETE FROM Schedule WHERE taskID = -100", con))
+            {
+                con.Open();
+                comm.ExecuteNonQuery();
+            }
+        }
     }
 }

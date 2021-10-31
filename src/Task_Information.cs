@@ -100,5 +100,12 @@ namespace YourTable
             tb.Show();
             Hide();
         }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            Menu m = new Menu();
+            m.Show();
+            Hide();
+        }
     }
 }

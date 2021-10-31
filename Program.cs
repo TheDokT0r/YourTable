@@ -28,7 +28,6 @@ namespace YourTable
             //}
 
             Options options = new Options();
-
             Application.Run(new Op()); //Used as a placeholder
         }
 

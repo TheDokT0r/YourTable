@@ -52,14 +52,5 @@
       "yes",
       "no"
     ]
-  },
-  {
-    "main": "wayOfWork",
-    "question": "Do you prefer to work on each task\na couple of hours in a\nrow or in different times",
-    "answer": "different times",
-    "options": [
-      "in a row",
-      "different times"
-    ]
   }
 ]

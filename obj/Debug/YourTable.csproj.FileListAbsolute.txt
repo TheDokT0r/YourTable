@@ -45,3 +45,4 @@ E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Debug\YourTable.Timetable.re
 E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Debug\YourTable.BusyHours.resources
 E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Debug\YourTable.TasksList.resources
 E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Debug\YourTable.Task_Information.resources
+E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Debug\YourTable.MessageBox.resources

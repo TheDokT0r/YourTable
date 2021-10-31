@@ -41,10 +41,9 @@
             this.lbl_welcomeBack.AutoSize = true;
             this.lbl_welcomeBack.BackColor = System.Drawing.Color.Transparent;
             this.lbl_welcomeBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_welcomeBack.Location = new System.Drawing.Point(252, -2);
-            this.lbl_welcomeBack.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_welcomeBack.Location = new System.Drawing.Point(189, -2);
             this.lbl_welcomeBack.Name = "lbl_welcomeBack";
-            this.lbl_welcomeBack.Size = new System.Drawing.Size(439, 69);
+            this.lbl_welcomeBack.Size = new System.Drawing.Size(352, 55);
             this.lbl_welcomeBack.TabIndex = 2;
             this.lbl_welcomeBack.Text = "Welcome back!";
             // 
@@ -54,10 +53,9 @@
             this.btn_changeInfo.BackgroundImage = global::YourTable.Properties.Resources.info_btn;
             this.btn_changeInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_changeInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_changeInfo.Location = new System.Drawing.Point(724, 122);
-            this.btn_changeInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_changeInfo.Location = new System.Drawing.Point(543, 99);
             this.btn_changeInfo.Name = "btn_changeInfo";
-            this.btn_changeInfo.Size = new System.Drawing.Size(312, 162);
+            this.btn_changeInfo.Size = new System.Drawing.Size(234, 132);
             this.btn_changeInfo.TabIndex = 3;
             this.btn_changeInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_changeInfo.UseVisualStyleBackColor = false;
@@ -69,10 +67,9 @@
             this.btn_yourTimeTable.BackgroundImage = global::YourTable.Properties.Resources.timetable_btn;
             this.btn_yourTimeTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_yourTimeTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_yourTimeTable.Location = new System.Drawing.Point(13, 122);
-            this.btn_yourTimeTable.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_yourTimeTable.Location = new System.Drawing.Point(10, 99);
             this.btn_yourTimeTable.Name = "btn_yourTimeTable";
-            this.btn_yourTimeTable.Size = new System.Drawing.Size(312, 162);
+            this.btn_yourTimeTable.Size = new System.Drawing.Size(234, 132);
             this.btn_yourTimeTable.TabIndex = 4;
             this.btn_yourTimeTable.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_yourTimeTable.UseVisualStyleBackColor = false;
@@ -84,10 +81,9 @@
             this.btn_addTask.BackgroundImage = global::YourTable.Properties.Resources.btn_new_tasks;
             this.btn_addTask.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_addTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_addTask.Location = new System.Drawing.Point(724, 345);
-            this.btn_addTask.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_addTask.Location = new System.Drawing.Point(543, 280);
             this.btn_addTask.Name = "btn_addTask";
-            this.btn_addTask.Size = new System.Drawing.Size(312, 162);
+            this.btn_addTask.Size = new System.Drawing.Size(234, 132);
             this.btn_addTask.TabIndex = 5;
             this.btn_addTask.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_addTask.UseVisualStyleBackColor = false;
@@ -99,10 +95,9 @@
             this.btn_busyHours.BackgroundImage = global::YourTable.Properties.Resources.busy_hours_btn;
             this.btn_busyHours.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_busyHours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_busyHours.Location = new System.Drawing.Point(13, 345);
-            this.btn_busyHours.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_busyHours.Location = new System.Drawing.Point(10, 280);
             this.btn_busyHours.Name = "btn_busyHours";
-            this.btn_busyHours.Size = new System.Drawing.Size(312, 162);
+            this.btn_busyHours.Size = new System.Drawing.Size(234, 132);
             this.btn_busyHours.TabIndex = 6;
             this.btn_busyHours.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_busyHours.UseVisualStyleBackColor = false;
@@ -114,10 +109,9 @@
             this.btn_AllTasks.BackgroundImage = global::YourTable.Properties.Resources.All_tasks_btn;
             this.btn_AllTasks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_AllTasks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AllTasks.Location = new System.Drawing.Point(377, 196);
-            this.btn_AllTasks.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_AllTasks.Location = new System.Drawing.Point(283, 159);
             this.btn_AllTasks.Name = "btn_AllTasks";
-            this.btn_AllTasks.Size = new System.Drawing.Size(312, 162);
+            this.btn_AllTasks.Size = new System.Drawing.Size(234, 132);
             this.btn_AllTasks.TabIndex = 7;
             this.btn_AllTasks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_AllTasks.UseVisualStyleBackColor = false;
@@ -125,11 +119,11 @@
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::YourTable.Properties.Resources.manu_back_21;
+            this.BackgroundImage = global::YourTable.Properties.Resources.pink_background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_AllTasks);
             this.Controls.Add(this.btn_busyHours);
             this.Controls.Add(this.btn_addTask);
@@ -137,7 +131,6 @@
             this.Controls.Add(this.btn_changeInfo);
             this.Controls.Add(this.lbl_welcomeBack);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "YourTable";

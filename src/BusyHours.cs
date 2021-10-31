@@ -120,7 +120,12 @@ namespace YourTable
             Hide();
         }
 
-
+        private void btn_goBack_Click(object sender, EventArgs e)
+        {
+            Menu m = new Menu();
+            m.Show();
+            Hide();
+        }
 
         private void BusyHours_FormClosing(object sender, FormClosingEventArgs e)
         {

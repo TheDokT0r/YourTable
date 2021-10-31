@@ -335,31 +335,31 @@ namespace YourTable
 
         public List<DateTime> FreeHoursOfTheDay(DateTime date)
         {
-            List<DateTime> hours = new List<DateTime>();
+            var freeHours = new List<DateTime>();
 
             User user = new User();
 
             for (int i = user.HoursOfWork[0]; i < user.HoursOfWork[1]; i++)
             {
                 DateTime hour = new DateTime(date.Year, date.Month, date.Day, i, 0, 0);
+                int exist;
 
-                Dictionary<string, object> task = GetTaskInDate(hour);
-
-                try
+                using (var con = new SQLiteConnection(cs))
+                using (var comm = new SQLiteCommand("SELECT EXISTS(SELECT 1 FROM Schedule WHERE date = @date)", con))
                 {
-                    if (!String.IsNullOrEmpty(task["id"].ToString()) && Convert.ToInt32(task["taskID"]) != -100) //Checks if the task exist
-                    {
-                        hours.Add(hour);
-                    }
+                    comm.Parameters.AddWithValue("@date", hour.ToString());
+                    con.Open();
+
+                    exist = Convert.ToInt32(comm.ExecuteScalar());
                 }
-                catch (Exception e) //means it's probably a null
+
+                if(exist != 1) //The object doesn't exists in the DB
                 {
-                    hours.Add(hour); //TODO: wat
-                    Console.WriteLine(e);
+                    freeHours.Add(hour);
                 }
             }
 
-            return hours;
+            return freeHours;
         }
 
 

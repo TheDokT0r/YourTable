@@ -46,12 +46,6 @@ namespace YourTable
 
             List<DateTime> prefarableDates = GetTimeOfDay(freeDates); //Prefarable by the user...
 
-
-            if (!user.workInARow)
-            {
-                //prefarableDates = WorkInARow(prefarableDates);
-            }
-
             prefarableDates = HoursOfWork(prefarableDates);
 
             Queue<DateTime> removeQueue = new Queue<DateTime>();
@@ -122,26 +116,7 @@ namespace YourTable
             return dt;
         }
 
-        private List<DateTime> WorkInARow(List<DateTime> prefatableDates) //TODO: Should probably change that method to be more "smart"
-        {
-            int counter = 0;
-            Queue<DateTime> removeDates = new Queue<DateTime>();
 
-            foreach(DateTime dt in prefatableDates)
-            {
-                if(counter % 2 == 0)
-                {
-                    removeDates.Enqueue(dt);
-                }
-            }
-
-            while(removeDates.Count > 0)
-            {
-                prefatableDates.Remove(removeDates.Dequeue());
-            }
-
-            return prefatableDates;
-        }
 
         //Shoutout to ma man: https://www.swinburneonline.edu.au/faqs/how-many-hours-of-study-per-week-are-recommended-per-unit
         private List<DateTime> StudyEachWeek(List<DateTime> dt) //8 hours a week on a subject
@@ -196,12 +171,21 @@ namespace YourTable
 
         private List<DateTime> AddRemoveExtraHours(List<DateTime> prefarableDates, List<DateTime> extraDates, int taskHoursNeeded)
         {
+            if(extraDates.Count + prefarableDates.Count < taskHoursNeeded)
+            {
+                string message = "It seems like you don't have enough time left to complete this task!";
+                string title = "Error";
+
+                MessageBox messageBox = new MessageBox(title, message);
+                messageBox.Show();
+            }
+
             while (prefarableDates.Count > taskHoursNeeded) //Too many hours
             {
                 prefarableDates.RemoveAt(prefarableDates.Count - 1);
             }
 
-            while (taskHoursNeeded > prefarableDates.Count) //Not enough hours
+            while(taskHoursNeeded > prefarableDates.Count) //Not enogugh hours
             {
                 Random random = new Random();
 
@@ -209,8 +193,6 @@ namespace YourTable
 
                 prefarableDates.Add(extraDates[rnd]);
                 extraDates.RemoveAt(rnd);
-
-                taskHoursNeeded--;
             }
 
             return prefarableDates;

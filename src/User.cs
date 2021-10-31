@@ -14,7 +14,6 @@ namespace YourTable
         public int TimeOfDay { get; } //0 = morning, 1 = noon, 2 = evening
         public int PrefarableHoursToWork { get; } //Amount of hours
         public bool WorkInWeekends { get; }
-        public bool workInARow { get; }
 
 
         /*Shoutout to those amzing researchers
@@ -40,9 +39,6 @@ namespace YourTable
 
 
             WorkInWeekends = GetWeekends(userData["weekends"].ToLower());
-
-
-            workInARow = GetWorkInRow(userData["wayOfWork"]);
         }
 
 

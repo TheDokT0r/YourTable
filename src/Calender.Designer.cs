@@ -65,7 +65,6 @@
             this.img_Next = new System.Windows.Forms.PictureBox();
             this.img_back = new System.Windows.Forms.PictureBox();
             this.lbl_year = new System.Windows.Forms.Label();
-            this.lbl_Error = new System.Windows.Forms.Label();
             this.btn_goToToday = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.img_Next)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_back)).BeginInit();
@@ -634,20 +633,6 @@
             this.lbl_year.TabIndex = 36;
             this.lbl_year.Text = "year";
             // 
-            // lbl_Error
-            // 
-            this.lbl_Error.AutoSize = true;
-            this.lbl_Error.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Error.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Error.ForeColor = System.Drawing.Color.Red;
-            this.lbl_Error.Location = new System.Drawing.Point(-1, 165);
-            this.lbl_Error.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_Error.Name = "lbl_Error";
-            this.lbl_Error.Size = new System.Drawing.Size(322, 62);
-            this.lbl_Error.TabIndex = 37;
-            this.lbl_Error.Text = "Date has alraedy passed,\r\nplease try another date";
-            this.lbl_Error.Visible = false;
-            // 
             // btn_goToToday
             // 
             this.btn_goToToday.BackColor = System.Drawing.Color.Transparent;
@@ -669,7 +654,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btn_goToToday);
-            this.Controls.Add(this.lbl_Error);
             this.Controls.Add(this.lbl_year);
             this.Controls.Add(this.img_back);
             this.Controls.Add(this.img_Next);
@@ -759,7 +743,6 @@
         private System.Windows.Forms.PictureBox img_Next;
         private System.Windows.Forms.PictureBox img_back;
         private System.Windows.Forms.Label lbl_year;
-        private System.Windows.Forms.Label lbl_Error;
         private System.Windows.Forms.Button btn_goToToday;
     }
 }

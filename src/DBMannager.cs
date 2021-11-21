@@ -237,6 +237,54 @@ namespace YourTable
             return priority;
         }
 
+        public Dictionary<string, string> GetNextTask()
+        {
+            DbDataRecord returnThis = null; //task from the database
+            DateTime smallestDate = new DateTime(3000, 1, 1);
+
+            using (SQLiteConnection con = new SQLiteConnection(cs))
+            using (SQLiteCommand comm = new SQLiteCommand("select * from Schedule", con))
+            {
+                con.Open();
+
+                using (var r = comm.ExecuteReader())
+                {
+                    if(r == null) //Check if there are even tasks
+                    {
+                        var nullDict = new Dictionary<string, string>()
+                        {
+                            {"id", null },
+                            {"taskID", null },
+                            {"name", null },
+                            {"date", null}
+                        };
+
+                        return nullDict;
+                    }
+
+                    foreach (DbDataRecord reader in r)
+                    {
+                        DateTime date = Convert.ToDateTime(reader["date"]);
+                        if (date.Date < smallestDate.Date && Convert.ToInt32(reader["taskID"]) != -100) //Which date comes first, also checks if it's a task or not (taskID)
+                        {
+                            smallestDate = date;
+                            returnThis = reader;
+                        }
+                    }
+                }
+            }
+
+            var dict = new Dictionary<string, string>()
+            {
+                {"id", returnThis["id"].ToString() },
+                {"taskID", returnThis["taskID"].ToString() },
+                {"name", returnThis["name"].ToString() },
+                {"date", smallestDate.ToString()}
+            };
+
+            return dict;
+        }
+
         public DateTime GetCompletionDate(int taskID)
         {
             DateTime completionDate = new DateTime();
@@ -400,6 +448,20 @@ namespace YourTable
             cmd.Parameters.AddWithValue("@id", taskID);
             cmd.ExecuteNonQuery();
         }
+
+
+        public void DeleteFromSchedule(DateTime dt)
+        {
+            var con = new SQLiteConnection(cs);
+            con.Open();
+            var cmd = new SQLiteCommand(con);
+
+            cmd.CommandText = "DELETE from Schedule WHERE date = @date";
+            cmd.Parameters.AddWithValue("@date", dt);
+
+            cmd.ExecuteNonQuery();
+        }
+
 
         public void DeletePastTasks() //Doesn't fucking work
         {

@@ -32,7 +32,7 @@ namespace YourTable
         }
 
 
-        //TODO: Finish this
+        //TODO: Finish this (suprising I know)
         private void btn_goToTask_Click(object sender, EventArgs e)
         {
             DBMannager db = new DBMannager();
@@ -63,7 +63,7 @@ namespace YourTable
 
                 tasks.Add(task);
 
-                string name = counter + ": " +  task["name"] + " (ID: " + task["taskID"] + ")";
+                string name = counter + ": " +  task["name"] + " (Task ID: " + task["taskID"] + ")";
 
                 lbx_tasks.Items.Add(name);
 

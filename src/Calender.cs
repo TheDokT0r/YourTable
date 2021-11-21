@@ -50,7 +50,7 @@ namespace YourTable
 
         void SetMonths() //set all of the months of the year into a list
         {
-            MonthsList.Add(new Month("Placeholder", 0)); //As the name says, it's a placeholder... WTF did you expact?
+            MonthsList.Add(new Month("Placeholder", 0)); //As the name says, it's a placeholder... 
             for (int i = 1; i <= 12; i++)
             {
                 DateTime d = new DateTime(DateTime.Now.Year, i, 1);
@@ -88,6 +88,7 @@ namespace YourTable
             }
         }
 
+
         private void img_Next_Click(object sender, EventArgs e)
         {
             if(currentMonth >= 12)
@@ -100,7 +101,7 @@ namespace YourTable
                 currentMonth++;
             }
 
-            if (MonthsList[currentMonth].name == "placeholder") //to skip placeholder
+            if (MonthsList[currentMonth].name == "placeholder") //to skip placeholder when going forward
             {
                 currentMonth++;
             }
@@ -108,6 +109,7 @@ namespace YourTable
             GetMonth(currentMonth);
             GetDays();
         }
+
 
         private void img_back_Click(object sender, EventArgs e)
         {
@@ -121,7 +123,7 @@ namespace YourTable
                 currentMonth--;
             }
 
-            if(MonthsList[currentMonth].name == "placeholder") //to skip placeholder
+            if(MonthsList[currentMonth].name == "placeholder") //to skip placeholder when going back
             {
                 currentMonth--;
             }
@@ -148,7 +150,7 @@ namespace YourTable
 
             else
             {
-                lbl_Error.Visible = true;
+                MessageBox.Show("Date has alraedy passed, please try another date", "Error", MessageBoxButtons.OK);
             }
         }
         

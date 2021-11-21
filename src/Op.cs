@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Runtime.InteropServices;
+
 
 namespace YourTable
 {
@@ -16,6 +18,7 @@ namespace YourTable
         public Op()
         {
             InitializeComponent();
+
             this.Text = "YourTable";
 
             Options options = new Options();
@@ -95,6 +98,5 @@ namespace YourTable
             Options options = new Options();
             options.CloseProgram(); 
         }
-
     }
 }

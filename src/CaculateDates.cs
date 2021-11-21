@@ -15,7 +15,7 @@ namespace YourTable
         DateTime completionDate;
         int firstHour, lastHour;
 
-
+        User user;
 
         public CaculateDates(string name, int timeTakeHours, int priority, DateTime completionDate)
         {
@@ -24,7 +24,7 @@ namespace YourTable
             this.priority = priority;
             this.completionDate = completionDate;
 
-            User user = new User();
+            user = new User();
 
             firstHour = user.HoursOfWork[0];
             lastHour = user.HoursOfWork[1];
@@ -34,7 +34,6 @@ namespace YourTable
 
         public List<DateTime> GetDates() //Caculate the dates of the task
         {
-            User user = new User();
             DBMannager task = new DBMannager();
 
             List<DateTime> freeDates = FindAllFreeTimes();
@@ -65,7 +64,7 @@ namespace YourTable
             }
 
 
-            var a = prefarableDates; //just to check something in debug...
+            var a = prefarableDates; //TODO: remove debug - just to check something in debug...
 
             prefarableDates = DevideBetweenDays(prefarableDates);
 
@@ -77,7 +76,7 @@ namespace YourTable
             return finalHours;
         }
 
-        private List<DateTime> FindAllFreeTimes() //I hate this shit so fucking much
+        private List<DateTime> FindAllFreeTimes()
         {
             DBMannager db = new DBMannager();
 
@@ -129,35 +128,33 @@ namespace YourTable
 
         private List<DateTime> HoursOfWork(List<DateTime> dt) //The prefared amount of hours that the user wants to work
         {
-            User user = new User();
-
             int hoursCounter = 0;
 
-            DateTime prevDay = new DateTime(2010, 1, 1);
+            DateTime prevDate = new DateTime(2010, 1, 1);
             Queue<DateTime> removeQueue = new Queue<DateTime>();
 
-            foreach (DateTime day in dt.ToArray())
+            foreach (DateTime date in dt.ToArray())
             {
-                if (day.Day == prevDay.Day)
+                //check if changed day
+                if (date.Day == prevDate.Day)
                 {
                     hoursCounter++;
 
                     if (hoursCounter >= user.PrefarableHoursToWork)
                     {
                         //dt.Remove(day);
-                        removeQueue.Enqueue(day);
+                        removeQueue.Enqueue(date);
                     }
                 }
-
                 else
                 {
                     hoursCounter = 0;
                 }
 
-                prevDay = day;
+                prevDate = date;
             }
 
-            while(removeQueue.Count > 0)
+            while(removeQueue.Count > 0) //Removes the dates 
             {
                 DateTime temp = removeQueue.Dequeue();
 
@@ -200,8 +197,6 @@ namespace YourTable
 
         private List<DateTime> GetTimeOfDay(List<DateTime> freeDates)
         {
-            User user = new User();
-
             List<DateTime> prefarableDates = new List<DateTime>();
 
             foreach (DateTime date in freeDates) //Adds all of the hours that the user prefer to the list

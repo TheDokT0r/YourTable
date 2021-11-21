@@ -91,6 +91,17 @@ namespace YourTable
 
         void Next()
         {
+            Stickers s = new Stickers(); 
+            string newLocation;
+            string prevLocation = img_sticker.ImageLocation;
+            do //Makes sure that the new sticker != to the prev one
+            {
+                newLocation = s.GetRandom();
+
+            } while (prevLocation == newLocation);
+            
+            img_sticker.ImageLocation = s.GetRandom();
+
             cmb_options.Items.Clear(); //Resets the options of cmb_options
 
             lbl_question.Text = j.ReadQuestion(jCounter);

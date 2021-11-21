@@ -83,6 +83,16 @@ namespace YourTable.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btn_about {
+            get {
+                object obj = ResourceManager.GetObject("btn_about", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btn_new_tasks {
             get {
                 object obj = ResourceManager.GetObject("btn new tasks", resourceCulture);

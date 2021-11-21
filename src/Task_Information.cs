@@ -12,10 +12,12 @@ namespace YourTable
 {
     public partial class Task_Information : Form
     {
+        int taskID;
         string name;
         int priority; //0 - 3
         DateTime completionDate;
         List<DateTime> dates;
+        DateTime selectedItem;
 
         public Task_Information(int id)
         {
@@ -29,7 +31,7 @@ namespace YourTable
             completionDate = Convert.ToDateTime(taskData["completionDate"]);
             priority = Convert.ToInt32(taskData["priority"]);
 
-            int taskID = Convert.ToInt32(taskData["taskID"]);
+            taskID = Convert.ToInt32(taskData["taskID"]);
 
             dates = db.GetAllDates(taskID);
         }
@@ -39,7 +41,7 @@ namespace YourTable
             Stickers s = new Stickers();
             img_sticker.ImageLocation = s.GetRandom();
 
-            lbl_name.Text = "Name : " + name;
+            lbl_name.Text = "Name: " + name;
             lbl_completionDate.Text = "Completion Date: " + completionDate;
 
             string priorityTxt;
@@ -89,9 +91,10 @@ namespace YourTable
         private void SelectedItem(object sender, EventArgs e)
         {
             btn_goToDate.Visible = true;
+            btn_remove.Visible = true;
         }
 
-        DateTime selectedItem;
+
         private void btn_goToDate_Click(object sender, EventArgs e)
         {
             selectedItem = Convert.ToDateTime(lbx_workDates.SelectedItem);
@@ -109,6 +112,22 @@ namespace YourTable
             Menu m = new Menu();
             m.Show();
             Hide();
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            AddSingularDate addSingularDate = new AddSingularDate(taskID, name);
+            addSingularDate.Show();
+        }
+
+        private void btn_remove_Click(object sender, EventArgs e) //TODO: if haven't be implemented, delete this
+        {
+            MessageBox.Show("Uh oh, seems like this feture doesn't work yet!", "Error!", MessageBoxButtons.OK);
+
+            selectedItem = Convert.ToDateTime(lbx_workDates.SelectedItem);
+
+            DBMannager db = new DBMannager();
+            db.DeleteFromSchedule(selectedItem);
         }
     }
 }

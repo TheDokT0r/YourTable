@@ -50,7 +50,6 @@
             this.img_title.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.img_title.TabIndex = 0;
             this.img_title.TabStop = false;
-            this.img_title.Click += new System.EventHandler(this.img_title_Click);
             // 
             // lbl_question
             // 

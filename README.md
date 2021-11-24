@@ -16,3 +16,6 @@ program, I'm sorry to tell you but you've got scammed... f in the chat).
 
 ## Capability
 Version 1.0 "Heros" is a Windows application for 64 bits machines.
+
+## Link to download
+Not out yet!

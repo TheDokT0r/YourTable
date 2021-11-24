@@ -52,9 +52,9 @@
             this.lbl_desc.AutoSize = true;
             this.lbl_desc.BackColor = System.Drawing.Color.Transparent;
             this.lbl_desc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_desc.Location = new System.Drawing.Point(142, 60);
+            this.lbl_desc.Location = new System.Drawing.Point(88, 59);
             this.lbl_desc.Name = "lbl_desc";
-            this.lbl_desc.Size = new System.Drawing.Size(837, 348);
+            this.lbl_desc.Size = new System.Drawing.Size(924, 319);
             this.lbl_desc.TabIndex = 1;
             this.lbl_desc.Text = resources.GetString("lbl_desc.Text");
             this.lbl_desc.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -78,7 +78,7 @@
             this.img_gitHub.BackgroundImage = global::YourTable.Properties.Resources.btn_github;
             this.img_gitHub.Cursor = System.Windows.Forms.Cursors.Hand;
             this.img_gitHub.Image = global::YourTable.Properties.Resources.btn_github;
-            this.img_gitHub.Location = new System.Drawing.Point(479, 415);
+            this.img_gitHub.Location = new System.Drawing.Point(484, 381);
             this.img_gitHub.Name = "img_gitHub";
             this.img_gitHub.Size = new System.Drawing.Size(84, 78);
             this.img_gitHub.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

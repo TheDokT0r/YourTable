@@ -118,18 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lbl_desc.Text" xml:space="preserve">
-    <value>YourTable is a free and open source program that was made
-by studets for students.
+    <value>YourTable is a free and open source program that was made by students for students.
 It was designed to help us, students, to have a better timetable
-creator application that would help them in mannaging their overall time.
+creator application that would help them in managing their overall time.
 YourTable version 1.0: Heros
 
 The program was made as an IB IA project for Computer Science. It was not
 meant to be public or be used for any monetized reasons (if you payed for this
 program, I'm sorry to tell you but you've got scammed... f in the chat).
 
-As I mentioned, this program is open source and in the public domaine.
-You can get the sourcecode in the github link below:
+As I mentioned, this program is open source and in the public domain.
+You can get the source code in the GitHub link below:
 </value>
   </data>
 </root>

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace YourTable
 {
-    public partial class AboutPage : Form
+    public partial class YourTable : Form
     {
-        public AboutPage()
+        public YourTable()
         {
             InitializeComponent();
         }
@@ -35,7 +35,7 @@ namespace YourTable
             Hide();
         }
 
-        private void link_github_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void img_gitHub_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/TheDokT0r/YourTable");
         }

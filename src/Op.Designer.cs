@@ -117,7 +117,7 @@
             this.Name = "Op";
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Op";
+            this.Text = "YourTable";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Op_Close);
             this.Load += new System.EventHandler(this.Op_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

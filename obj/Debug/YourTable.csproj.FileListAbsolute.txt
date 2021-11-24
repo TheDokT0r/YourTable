@@ -21,7 +21,6 @@ E:\GHIS\Computer Science\IA\YourTable\YourTable\bin\Debug\Newtonsoft.Json.dll
 E:\GHIS\Computer Science\IA\YourTable\YourTable\bin\Debug\Newtonsoft.Json.xml
 E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Debug\YourTable.csproj.CopyComplete
 E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Debug\YourTable.Questions.resources
-E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Debug\YourTable.csprojAssemblyReference.cache
 E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Debug\YourTable.Menu.resources
 E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Debug\YourTable.Op.resources
 E:\GHIS\Computer Science\IA\YourTable\YourTable\bin\Debug\Microsoft.Data.Sqlite.dll
@@ -46,4 +45,5 @@ E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Debug\YourTable.BusyHours.re
 E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Debug\YourTable.TasksList.resources
 E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Debug\YourTable.Task_Information.resources
 E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Debug\YourTable.AddSingularDate.resources
-E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Debug\YourTable.AboutPage.resources
+E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Debug\YourTable.YourTable.resources
+E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Debug\YourTable.csprojAssemblyReference.cache

@@ -69,7 +69,7 @@
             // btn_Reset
             // 
             this.btn_Reset.Location = new System.Drawing.Point(881, 345);
-            this.btn_Reset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Reset.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Reset.Name = "btn_Reset";
             this.btn_Reset.Size = new System.Drawing.Size(169, 63);
             this.btn_Reset.TabIndex = 1;
@@ -81,7 +81,7 @@
             // btn_Back
             // 
             this.btn_Back.Location = new System.Drawing.Point(881, 251);
-            this.btn_Back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Back.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.Size = new System.Drawing.Size(169, 63);
             this.btn_Back.TabIndex = 2;
@@ -273,7 +273,7 @@
             // 
             this.btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn7.Location = new System.Drawing.Point(219, 65);
-            this.btn7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn7.Margin = new System.Windows.Forms.Padding(4);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(192, 38);
             this.btn7.TabIndex = 19;
@@ -285,7 +285,7 @@
             // 
             this.btn8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn8.Location = new System.Drawing.Point(219, 118);
-            this.btn8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn8.Margin = new System.Windows.Forms.Padding(4);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(192, 38);
             this.btn8.TabIndex = 20;
@@ -297,7 +297,7 @@
             // 
             this.btn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn9.Location = new System.Drawing.Point(219, 171);
-            this.btn9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn9.Margin = new System.Windows.Forms.Padding(4);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(192, 38);
             this.btn9.TabIndex = 21;
@@ -309,7 +309,7 @@
             // 
             this.btn10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn10.Location = new System.Drawing.Point(219, 223);
-            this.btn10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn10.Margin = new System.Windows.Forms.Padding(4);
             this.btn10.Name = "btn10";
             this.btn10.Size = new System.Drawing.Size(192, 38);
             this.btn10.TabIndex = 22;
@@ -321,7 +321,7 @@
             // 
             this.btn11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn11.Location = new System.Drawing.Point(219, 276);
-            this.btn11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn11.Margin = new System.Windows.Forms.Padding(4);
             this.btn11.Name = "btn11";
             this.btn11.Size = new System.Drawing.Size(192, 38);
             this.btn11.TabIndex = 23;
@@ -333,7 +333,7 @@
             // 
             this.btn12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn12.Location = new System.Drawing.Point(219, 329);
-            this.btn12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn12.Margin = new System.Windows.Forms.Padding(4);
             this.btn12.Name = "btn12";
             this.btn12.Size = new System.Drawing.Size(192, 38);
             this.btn12.TabIndex = 24;
@@ -345,7 +345,7 @@
             // 
             this.btn13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn13.Location = new System.Drawing.Point(219, 384);
-            this.btn13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn13.Margin = new System.Windows.Forms.Padding(4);
             this.btn13.Name = "btn13";
             this.btn13.Size = new System.Drawing.Size(192, 38);
             this.btn13.TabIndex = 25;
@@ -357,7 +357,7 @@
             // 
             this.btn14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn14.Location = new System.Drawing.Point(219, 441);
-            this.btn14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn14.Margin = new System.Windows.Forms.Padding(4);
             this.btn14.Name = "btn14";
             this.btn14.Size = new System.Drawing.Size(192, 38);
             this.btn14.TabIndex = 26;
@@ -369,7 +369,7 @@
             // 
             this.btn15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn15.Location = new System.Drawing.Point(548, 65);
-            this.btn15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn15.Margin = new System.Windows.Forms.Padding(4);
             this.btn15.Name = "btn15";
             this.btn15.Size = new System.Drawing.Size(192, 38);
             this.btn15.TabIndex = 27;
@@ -381,7 +381,7 @@
             // 
             this.btn16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn16.Location = new System.Drawing.Point(548, 118);
-            this.btn16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn16.Margin = new System.Windows.Forms.Padding(4);
             this.btn16.Name = "btn16";
             this.btn16.Size = new System.Drawing.Size(192, 38);
             this.btn16.TabIndex = 28;
@@ -393,7 +393,7 @@
             // 
             this.btn17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn17.Location = new System.Drawing.Point(548, 171);
-            this.btn17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn17.Margin = new System.Windows.Forms.Padding(4);
             this.btn17.Name = "btn17";
             this.btn17.Size = new System.Drawing.Size(192, 38);
             this.btn17.TabIndex = 29;
@@ -405,7 +405,7 @@
             // 
             this.btn18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn18.Location = new System.Drawing.Point(548, 223);
-            this.btn18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn18.Margin = new System.Windows.Forms.Padding(4);
             this.btn18.Name = "btn18";
             this.btn18.Size = new System.Drawing.Size(192, 38);
             this.btn18.TabIndex = 30;
@@ -417,7 +417,7 @@
             // 
             this.btn19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn19.Location = new System.Drawing.Point(548, 276);
-            this.btn19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn19.Margin = new System.Windows.Forms.Padding(4);
             this.btn19.Name = "btn19";
             this.btn19.Size = new System.Drawing.Size(192, 38);
             this.btn19.TabIndex = 31;
@@ -429,7 +429,7 @@
             // 
             this.btn20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn20.Location = new System.Drawing.Point(548, 329);
-            this.btn20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn20.Margin = new System.Windows.Forms.Padding(4);
             this.btn20.Name = "btn20";
             this.btn20.Size = new System.Drawing.Size(192, 38);
             this.btn20.TabIndex = 32;
@@ -441,7 +441,7 @@
             // 
             this.btn21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn21.Location = new System.Drawing.Point(548, 384);
-            this.btn21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn21.Margin = new System.Windows.Forms.Padding(4);
             this.btn21.Name = "btn21";
             this.btn21.Size = new System.Drawing.Size(192, 38);
             this.btn21.TabIndex = 33;
@@ -462,7 +462,7 @@
             // 
             // jsonFileBindingSource
             // 
-            this.jsonFileBindingSource.DataSource = typeof(YourTable.Json_File);
+            //this.jsonFileBindingSource.DataSource = typeof(YourTable.Json_File);
             // 
             // Timetable
             // 
@@ -505,10 +505,10 @@
             this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.btn_Reset);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Timetable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Timetable";
+            this.Text = "YourTable";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Timetable_Close);
             this.Load += new System.EventHandler(this.Timetable_Load);
             ((System.ComponentModel.ISupportInitialize)(this.jsonFileBindingSource)).EndInit();

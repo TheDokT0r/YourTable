@@ -265,7 +265,7 @@ namespace YourTable
                     foreach (DbDataRecord reader in r)
                     {
                         DateTime date = Convert.ToDateTime(reader["date"]);
-                        if (date.Date < smallestDate.Date && Convert.ToInt32(reader["taskID"]) != -100) //Which date comes first, also checks if it's a task or not (taskID)
+                        if (date.Date <= smallestDate.Date && Convert.ToInt32(reader["taskID"]) != -100) //Which date comes first, also checks if it's a task or not (taskID)
                         {
                             smallestDate = date;
                             returnThis = reader;
@@ -452,18 +452,18 @@ namespace YourTable
 
         public void DeleteFromSchedule(DateTime dt)
         {
-            var con = new SQLiteConnection(cs);
-            con.Open();
-            var cmd = new SQLiteCommand(con);
+            using (var con = new SQLiteConnection(cs))
+            using (var comm = new SQLiteCommand("DELETE from Schedule WHERE date = @date", con))
+            {
+                con.Open();
+                comm.Parameters.AddWithValue("@date", dt);
 
-            cmd.CommandText = "DELETE from Schedule WHERE date = @date";
-            cmd.Parameters.AddWithValue("@date", dt);
-
-            cmd.ExecuteNonQuery();
+                comm.ExecuteNonQuery();
+            }
         }
 
 
-        public void DeletePastTasks() //Doesn't fucking work
+        public void DeletePastTasks() //TODO: Delete (doesn't work)
         {
             var removeDates = new Queue<DateTime>();
 

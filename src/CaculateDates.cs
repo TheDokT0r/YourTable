@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace YourTable
 {
+    //TODO: Run a debug on the entire thing (catch the error from last time)
     public class CaculateDates
     {
         string name;
@@ -167,33 +168,6 @@ namespace YourTable
             return dt;
         }
 
-        private List<DateTime> AddRemoveExtraHours(List<DateTime> prefarableDates, List<DateTime> extraDates, int taskHoursNeeded)
-        {
-            if(extraDates.Count + prefarableDates.Count < taskHoursNeeded)
-            {
-                string message = "It seems like you don't have enough time left to complete this task!";
-                string title = "Error";
-
-                MessageBox.Show(message, title, MessageBoxButtons.OK);
-            }
-
-            while (prefarableDates.Count > taskHoursNeeded) //Too many hours
-            {
-                prefarableDates.RemoveAt(prefarableDates.Count - 1);
-            }
-
-            while(taskHoursNeeded > prefarableDates.Count) //Not enogugh hours
-            {
-                Random random = new Random();
-
-                int rnd = random.Next(0, extraDates.Count);
-
-                prefarableDates.Add(extraDates[rnd]);
-                extraDates.RemoveAt(rnd);
-            }
-
-            return prefarableDates;
-        }
 
         private List<DateTime> GetTimeOfDay(List<DateTime> freeDates)
         {
@@ -208,6 +182,23 @@ namespace YourTable
             }
 
             return prefarableDates;
+        }
+
+
+        private int TimeOfDay(DateTime dt) //Check what time of the day a date is
+        {
+            int hour = dt.Hour;
+
+            if (hour >= 6 && hour <= 12) //Morning
+            {
+                return 0;
+            }
+            else if (hour > 12 && hour <= 17) //Afrernoon
+            {
+                return 1;
+            }
+
+            return 3; //Evening
         }
 
 
@@ -226,7 +217,7 @@ namespace YourTable
             }
             catch(Exception e)
             {
-                Console.WriteLine(e);
+                Options.InsertToLog(e.Message, "CaculateDates");
                 workEachDay = 1;
             }
 
@@ -235,7 +226,7 @@ namespace YourTable
             prevDate = new DateTime(1, 1, 1);
             var removeThoseDates = new Queue<DateTime>();
 
-            for(int i = 0; i < dt.Count; i++) //What the actual fuck
+            for(int i = 0; i < dt.Count; i++)
             {
                 if(counter == workEachDay)
                 {
@@ -263,22 +254,79 @@ namespace YourTable
             return dt;
         }
 
-
-
-        private int TimeOfDay(DateTime dt) //Check what time of the day a date is
+       /*private List<DateTime> DevideBetweenDays(List<DateTime> dtList) //So all of the times woudln't be in the same day
         {
-            int hour = dt.Hour;
-
-            if (hour >= 6 && hour <= 12) //Morning
+            int workEachDay = 1; //How much time he should work heach week
+            try
             {
-                return 0;
+                workEachDay = dtList.Count / dtList.Count;
             }
-            else if (hour > 12 && hour <= 17) //Afrernoon
+            catch (Exception e)
             {
-                return 1;
+                Options op = new Options();
+                if (op.checkHackerMode())
+                {
+                    MessageBox.Show(e.Message, "Exception", MessageBoxButtons.OK);
+                }
             }
 
-            return 3; //Evening
+            List<List<DateTime>> days = new List<List<DateTime>>(); //List of days, in each days there're all of the hours of said day (also in a list)
+            int hoursOfWorkInDay = 0;
+
+            foreach(DateTime dt in dtList)
+            {
+                List<DateTime> day = new List<DateTime>();
+                if(hoursOfWorkInDay != workEachDay) //Still the same day
+                {
+                    day.Add(dt);
+                    hoursOfWorkInDay++;
+                }
+                else //A dawn of a new day...
+                {
+                    days.Add(day); //Add to days the new list of hours in a day that was just createds
+                    hoursOfWorkInDay = 0;
+                }
+            }
+
+
+            var newDtList = new List<DateTime>();
+            foreach(List<DateTime> day in days)
+            {
+                foreach(DateTime hour in day)
+                {
+                    newDtList.Add(hour);
+                }
+            }
+
+            return newDtList;
+        }*/
+
+        private List<DateTime> AddRemoveExtraHours(List<DateTime> prefarableDates, List<DateTime> extraDates, int taskHoursNeeded)
+        {
+            if (extraDates.Count + prefarableDates.Count < taskHoursNeeded)
+            {
+                string message = "It seems like you don't have enough time left to complete this task!";
+                string title = "Error";
+
+                MessageBox.Show(message, title, MessageBoxButtons.OK);
+            }
+
+            while (prefarableDates.Count > taskHoursNeeded) //Too many hours
+            {
+                prefarableDates.RemoveAt(prefarableDates.Count - 1);
+            }
+
+            while (taskHoursNeeded > prefarableDates.Count) //Not enogugh hours
+            {
+                Random random = new Random();
+
+                int rnd = random.Next(0, extraDates.Count);
+
+                prefarableDates.Add(extraDates[rnd]);
+                extraDates.RemoveAt(rnd);
+            }
+
+            return prefarableDates;
         }
     }
 }

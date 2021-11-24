@@ -48,9 +48,10 @@
             this.lbl_title.AutoSize = true;
             this.lbl_title.BackColor = System.Drawing.Color.Transparent;
             this.lbl_title.Font = new System.Drawing.Font("MV Boli", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_title.Location = new System.Drawing.Point(232, -13);
+            this.lbl_title.Location = new System.Drawing.Point(309, -16);
+            this.lbl_title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_title.Name = "lbl_title";
-            this.lbl_title.Size = new System.Drawing.Size(326, 85);
+            this.lbl_title.Size = new System.Drawing.Size(407, 105);
             this.lbl_title.TabIndex = 0;
             this.lbl_title.Text = "Task Logs";
             // 
@@ -59,9 +60,10 @@
             this.lbl_name.AutoSize = true;
             this.lbl_name.BackColor = System.Drawing.Color.Transparent;
             this.lbl_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_name.Location = new System.Drawing.Point(12, 95);
+            this.lbl_name.Location = new System.Drawing.Point(16, 117);
+            this.lbl_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(286, 37);
+            this.lbl_name.Size = new System.Drawing.Size(355, 46);
             this.lbl_name.TabIndex = 1;
             this.lbl_name.Text = "Name: placeholder";
             // 
@@ -70,9 +72,10 @@
             this.lbl_priority.AutoSize = true;
             this.lbl_priority.BackColor = System.Drawing.Color.Transparent;
             this.lbl_priority.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_priority.Location = new System.Drawing.Point(12, 151);
+            this.lbl_priority.Location = new System.Drawing.Point(16, 186);
+            this.lbl_priority.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_priority.Name = "lbl_priority";
-            this.lbl_priority.Size = new System.Drawing.Size(299, 37);
+            this.lbl_priority.Size = new System.Drawing.Size(374, 46);
             this.lbl_priority.TabIndex = 2;
             this.lbl_priority.Text = "Priority: placeholder";
             // 
@@ -81,9 +84,10 @@
             this.lbl_completionDate.AutoSize = true;
             this.lbl_completionDate.BackColor = System.Drawing.Color.Transparent;
             this.lbl_completionDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_completionDate.Location = new System.Drawing.Point(12, 208);
+            this.lbl_completionDate.Location = new System.Drawing.Point(16, 256);
+            this.lbl_completionDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_completionDate.Name = "lbl_completionDate";
-            this.lbl_completionDate.Size = new System.Drawing.Size(438, 37);
+            this.lbl_completionDate.Size = new System.Drawing.Size(547, 46);
             this.lbl_completionDate.TabIndex = 3;
             this.lbl_completionDate.Text = "Completion Date: placeholder";
             // 
@@ -92,9 +96,10 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 323);
+            this.label1.Location = new System.Drawing.Point(16, 398);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 37);
+            this.label1.Size = new System.Drawing.Size(240, 46);
             this.label1.TabIndex = 4;
             this.label1.Text = "Work Dates:";
             // 
@@ -103,10 +108,11 @@
             this.lbx_workDates.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lbx_workDates.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbx_workDates.FormattingEnabled = true;
-            this.lbx_workDates.ItemHeight = 19;
-            this.lbx_workDates.Location = new System.Drawing.Point(198, 313);
+            this.lbx_workDates.ItemHeight = 24;
+            this.lbx_workDates.Location = new System.Drawing.Point(264, 385);
+            this.lbx_workDates.Margin = new System.Windows.Forms.Padding(4);
             this.lbx_workDates.Name = "lbx_workDates";
-            this.lbx_workDates.Size = new System.Drawing.Size(217, 118);
+            this.lbx_workDates.Size = new System.Drawing.Size(288, 148);
             this.lbx_workDates.TabIndex = 5;
             this.lbx_workDates.SelectedIndexChanged += new System.EventHandler(this.SelectedItem);
             // 
@@ -116,10 +122,10 @@
             this.btn_goToDate.CausesValidation = false;
             this.btn_goToDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_goToDate.Font = new System.Drawing.Font("Minecraft", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_goToDate.Location = new System.Drawing.Point(603, 305);
-            this.btn_goToDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_goToDate.Location = new System.Drawing.Point(804, 375);
+            this.btn_goToDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_goToDate.Name = "btn_goToDate";
-            this.btn_goToDate.Size = new System.Drawing.Size(186, 72);
+            this.btn_goToDate.Size = new System.Drawing.Size(248, 89);
             this.btn_goToDate.TabIndex = 6;
             this.btn_goToDate.Text = "Go to date";
             this.btn_goToDate.UseVisualStyleBackColor = false;
@@ -131,9 +137,10 @@
             this.lbl_count.AutoSize = true;
             this.lbl_count.BackColor = System.Drawing.Color.Transparent;
             this.lbl_count.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_count.Location = new System.Drawing.Point(12, 265);
+            this.lbl_count.Location = new System.Drawing.Point(16, 326);
+            this.lbl_count.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_count.Name = "lbl_count";
-            this.lbl_count.Size = new System.Drawing.Size(378, 37);
+            this.lbl_count.Size = new System.Drawing.Size(471, 46);
             this.lbl_count.TabIndex = 7;
             this.lbl_count.Text = "Dates Count: placeholder";
             // 
@@ -143,10 +150,10 @@
             this.btn_cancel.CausesValidation = false;
             this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancel.Font = new System.Drawing.Font("Minecraft", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(659, 387);
-            this.btn_cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_cancel.Location = new System.Drawing.Point(879, 476);
+            this.btn_cancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(130, 44);
+            this.btn_cancel.Size = new System.Drawing.Size(173, 54);
             this.btn_cancel.TabIndex = 8;
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.UseVisualStyleBackColor = false;
@@ -155,10 +162,10 @@
             // img_sticker
             // 
             this.img_sticker.BackColor = System.Drawing.Color.Transparent;
-            this.img_sticker.Location = new System.Drawing.Point(564, 16);
-            this.img_sticker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.img_sticker.Location = new System.Drawing.Point(752, 20);
+            this.img_sticker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.img_sticker.Name = "img_sticker";
-            this.img_sticker.Size = new System.Drawing.Size(225, 172);
+            this.img_sticker.Size = new System.Drawing.Size(300, 212);
             this.img_sticker.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.img_sticker.TabIndex = 9;
             this.img_sticker.TabStop = false;
@@ -168,10 +175,10 @@
             this.btn_add.BackColor = System.Drawing.Color.Transparent;
             this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_add.Font = new System.Drawing.Font("Minecraft", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.Location = new System.Drawing.Point(420, 313);
-            this.btn_add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_add.Location = new System.Drawing.Point(560, 385);
+            this.btn_add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(86, 31);
+            this.btn_add.Size = new System.Drawing.Size(128, 38);
             this.btn_add.TabIndex = 10;
             this.btn_add.Text = "Add";
             this.btn_add.UseVisualStyleBackColor = false;
@@ -182,10 +189,10 @@
             this.btn_remove.BackColor = System.Drawing.Color.Transparent;
             this.btn_remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_remove.Font = new System.Drawing.Font("Minecraft", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_remove.Location = new System.Drawing.Point(420, 356);
-            this.btn_remove.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_remove.Location = new System.Drawing.Point(560, 438);
+            this.btn_remove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_remove.Name = "btn_remove";
-            this.btn_remove.Size = new System.Drawing.Size(86, 31);
+            this.btn_remove.Size = new System.Drawing.Size(128, 38);
             this.btn_remove.TabIndex = 11;
             this.btn_remove.Text = "Remove";
             this.btn_remove.UseVisualStyleBackColor = false;
@@ -194,11 +201,11 @@
             // 
             // Task_Information
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::YourTable.Properties.Resources.pink_background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btn_remove);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.img_sticker);
@@ -212,9 +219,10 @@
             this.Controls.Add(this.lbl_name);
             this.Controls.Add(this.lbl_title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Task_Information";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Task_Information";
+            this.Text = "YourTable";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.From_Closing);
             this.Load += new System.EventHandler(this.Task_Information_Load);
             ((System.ComponentModel.ISupportInitialize)(this.img_sticker)).EndInit();

@@ -270,7 +270,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BusyHours";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BusyHours";
+            this.Text = "YourTable";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BusyHours_FormClosing);
             this.Load += new System.EventHandler(this.BusyHours_Load);
             ((System.ComponentModel.ISupportInitialize)(this.img_sticker)).EndInit();

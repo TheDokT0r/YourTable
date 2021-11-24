@@ -42,6 +42,7 @@
             this.img_sticker = new System.Windows.Forms.PictureBox();
             this.lbl_hour = new System.Windows.Forms.Label();
             this.txb_hour = new System.Windows.Forms.TextBox();
+            this.cmb_hour = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.img_sticker)).BeginInit();
             this.SuspendLayout();
             // 
@@ -190,21 +191,49 @@
             this.lbl_hour.AutoSize = true;
             this.lbl_hour.BackColor = System.Drawing.Color.Transparent;
             this.lbl_hour.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_hour.Location = new System.Drawing.Point(663, 498);
+            this.lbl_hour.Location = new System.Drawing.Point(647, 498);
             this.lbl_hour.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_hour.Name = "lbl_hour";
-            this.lbl_hour.Size = new System.Drawing.Size(84, 36);
+            this.lbl_hour.Size = new System.Drawing.Size(242, 36);
             this.lbl_hour.TabIndex = 15;
-            this.lbl_hour.Text = "hour:";
+            this.lbl_hour.Text = "Completion hour:";
             // 
             // txb_hour
             // 
             this.txb_hour.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_hour.Location = new System.Drawing.Point(755, 501);
+            this.txb_hour.Location = new System.Drawing.Point(512, 444);
             this.txb_hour.Margin = new System.Windows.Forms.Padding(4);
             this.txb_hour.Name = "txb_hour";
-            this.txb_hour.Size = new System.Drawing.Size(113, 30);
+            this.txb_hour.Size = new System.Drawing.Size(96, 30);
             this.txb_hour.TabIndex = 16;
+            this.txb_hour.Visible = false;
+            // 
+            // cmb_hour
+            // 
+            this.cmb_hour.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_hour.FormattingEnabled = true;
+            this.cmb_hour.Items.AddRange(new object[] {
+            "8:00",
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00",
+            "18:00",
+            "19:00",
+            "20:00",
+            "21:00",
+            "22:00",
+            "23:00",
+            "00:00"});
+            this.cmb_hour.Location = new System.Drawing.Point(909, 501);
+            this.cmb_hour.Name = "cmb_hour";
+            this.cmb_hour.Size = new System.Drawing.Size(121, 33);
+            this.cmb_hour.TabIndex = 17;
             // 
             // AddTask
             // 
@@ -213,6 +242,7 @@
             this.BackgroundImage = global::YourTable.Properties.Resources.pink_background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.cmb_hour);
             this.Controls.Add(this.txb_hour);
             this.Controls.Add(this.lbl_hour);
             this.Controls.Add(this.img_sticker);
@@ -255,5 +285,6 @@
         private System.Windows.Forms.PictureBox img_sticker;
         private System.Windows.Forms.Label lbl_hour;
         private System.Windows.Forms.TextBox txb_hour;
+        private System.Windows.Forms.ComboBox cmb_hour;
     }
 }

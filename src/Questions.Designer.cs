@@ -144,7 +144,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Questions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Questions";
+            this.Text = "YourTable";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Questios_Close);
             this.Load += new System.EventHandler(this.Questions_Load);
             ((System.ComponentModel.ISupportInitialize)(this.img_title)).EndInit();

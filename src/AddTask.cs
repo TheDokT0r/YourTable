@@ -95,6 +95,7 @@ namespace YourTable
                 }
 
                 MessageBox.Show(errorList, "Error", MessageBoxButtons.OK);
+                Options.InsertToLog(errorList, "AddTask");
             }
 
             return false;
@@ -113,12 +114,7 @@ namespace YourTable
         {
             get
             {
-                if(int.TryParse(txt_hours.Text, out int hour))
-                {
-                    return hour;
-                }
-
-                return -1; //would throw an error
+                return cmb_hour.SelectedIndex + 7;
             }
         }
 

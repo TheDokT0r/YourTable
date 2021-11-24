@@ -119,7 +119,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "TasksList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TasksList";
+            this.Text = "YourTable";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.End_Program);
             this.Load += new System.EventHandler(this.TasksList_Load);
             this.ResumeLayout(false);

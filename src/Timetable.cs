@@ -104,7 +104,6 @@ namespace YourTable
                 }
                 catch(Exception e)
                 {
-                    Console.WriteLine(e);
                     task.Text = "Free hour!";
                 }
 
@@ -195,7 +194,7 @@ namespace YourTable
             }
             catch(Exception er)
             {
-                Console.WriteLine(er);
+                Options.InsertToLog(er.Message, "Timetable");
             }
         }
     }

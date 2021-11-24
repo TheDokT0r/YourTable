@@ -89,7 +89,7 @@ namespace YourTable
 
         private void btn_About_Click(object sender, EventArgs e)
         {
-            AboutPage aboutPage = new AboutPage();
+            YourTable aboutPage = new YourTable();
             aboutPage.Show();
             Hide();
         }
@@ -105,34 +105,66 @@ namespace YourTable
         Dictionary<string, string> nextTask;
         void GetNextTask()
         {
-            DBMannager db = new DBMannager();
-            nextTask = db.GetNextTask();
-
-            if (nextTask["name"] != null) //If there is a next task...
+            try
             {
+                DBMannager db = new DBMannager();
+                nextTask = db.GetNextTask();
+
                 lbl_nextTaskName.Text = nextTask["name"];
                 lbl_nextTaskTime.Text = nextTask["date"];
             }
+            catch(Exception e)
+            {
+                Options op = new Options();
+                if(op.checkHackerMode())
+                {
+                    MessageBox.Show(e.Message, "Exception", MessageBoxButtons.OK);
+                }
+            }
         }
 
-        private void lbl_nextTaskName_Click(object sender, EventArgs e)
+        private void lbl_nextTaskName_Click(object sender, EventArgs e) //Get you to the task log of the next task
         {
-            DBMannager db = new DBMannager();
-            nextTask = db.GetNextTask();
+            try
+            {
+                DBMannager db = new DBMannager();
+                nextTask = db.GetNextTask();
 
-            Task_Information task_Information = new Task_Information(Convert.ToInt32(nextTask["taskID"]));
-            task_Information.Show();
-            Hide();
+                Task_Information task_Information = new Task_Information(Convert.ToInt32(nextTask["taskID"]));
+                task_Information.Show();
+                Hide();
+            }
+            catch(Exception ex)
+            {
+                Options options = new Options();
+                if(options.checkHackerMode())
+                {
+                    MessageBox.Show(ex.Message, "Dev Error Log", MessageBoxButtons.OK);
+                }
+                Options.InsertToLog(ex.Message, "Menu");
+            }
         }
 
-        private void lbl_nextTaskTime_Click(object sender, EventArgs e)
+        private void lbl_nextTaskTime_Click(object sender, EventArgs e) //Gets you to the date of the next task
         {
-            DBMannager db = new DBMannager();
-            nextTask = db.GetNextTask();
+            try
+            {
+                DBMannager db = new DBMannager();
+                nextTask = db.GetNextTask();
 
-            Timetable timetable = new Timetable(Convert.ToDateTime(nextTask["date"]));
-            timetable.Show();
-            Hide();
+                Timetable timetable = new Timetable(Convert.ToDateTime(nextTask["date"]));
+                timetable.Show();
+                Hide();
+            }
+            catch(Exception ex)
+            {
+                Options options = new Options();
+                if (options.checkHackerMode())
+                {
+                    MessageBox.Show(ex.Message, "Dev Error Log", MessageBoxButtons.OK);
+                }
+                Options.InsertToLog(ex.Message, "Menu");
+            }
         }
     }
 }

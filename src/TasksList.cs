@@ -93,13 +93,12 @@ namespace YourTable
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex);
-
                 Options options = new Options();
 
+                Options.InsertToLog(ex.Message, "TaskList");
                 if(options.checkHackerMode())
                 {
-                    MessageBox.Show(e.ToString(), "Error!", MessageBoxButtons.OK);
+                    MessageBox.Show(ex.Message , "Error!", MessageBoxButtons.OK);
                 }
             }
         }

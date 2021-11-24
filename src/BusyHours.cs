@@ -132,11 +132,16 @@ namespace YourTable
 
         private void btn_reset_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Resets your data, might take a second...", "Loading", MessageBoxButtons.OK);
+            MessageBoxButtons button = new MessageBoxButtons();
 
-            DBMannager db = new DBMannager();
+            if (MessageBox.Show("Are you sure you want to reset your busy hours?", "Reset" , MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) //If the user pressed yes
+            {
+                MessageBox.Show("Resets your data, might take a second...", "Loading", MessageBoxButtons.OK);
 
-            db.DeleteBusyHours();
+                DBMannager db = new DBMannager();
+
+                db.DeleteBusyHours();
+            }
         }
 
         private void BusyHours_FormClosing(object sender, FormClosingEventArgs e)

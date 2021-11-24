@@ -255,6 +255,7 @@
     <Content Include="bin\x86\Debug\img\back btn.png" />
     <Content Include="bin\x86\Debug\img\btn new tasks.png" />
     <None Include="bin\x86\Debug\img\btn_about.png" />
+    <None Include="bin\x86\Debug\img\btn_github.png" />
     <Content Include="bin\x86\Debug\img\busy hours btn.png" />
     <Content Include="bin\x86\Debug\img\info btn.png" />
     <Content Include="bin\x86\Debug\img\info logo.png" />

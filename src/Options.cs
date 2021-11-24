@@ -12,17 +12,18 @@ namespace YourTable
     {
         //Putting it here just in case I would like to add more stuff to the program before it closes
         //in the future... (Perhaps does something with the db idk)
+        static string localAppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
         public void CloseProgram()
         {
             Application.Exit();
+            //InsertToLog("Program closed"); //Does it twice for some reason (I don't know why)
         }
 
 
         public bool checkHackerMode()
         {
             //string localAppData = Environment.GetEnvironmentVariable("LocalAppData");
-            string localAppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string path = localAppData + @"\YT_Data\gamer.png";
             string txt = File.ReadAllText(path);
 
@@ -42,9 +43,7 @@ namespace YourTable
 
         public bool hasOpened()
         {
-            //string localAppData = Environment.GetEnvironmentVariable("LocalAppData");
-            string localAppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            string path = localAppData + @"\YT_Data\hasOpened";
+            string path = localAppData + @"\YT_Data\hasOpened.txt";
             string txt = File.ReadAllText(path);
 
             if (txt.ToLower() != "1")
@@ -53,6 +52,18 @@ namespace YourTable
             }
 
             return true;
+        }
+
+
+        public static void InsertToLog(string msg, string formName) //Insert data to program's log (Appdata)
+        {
+            string path = localAppData + @"\YT_DATA\program log.txt";
+
+            DateTime now = DateTime.Now;
+            using (StreamWriter w = File.AppendText(path))
+            {
+                w.WriteLine(now + ": (" + formName + ") " + msg);
+            }
         }
     }
 }

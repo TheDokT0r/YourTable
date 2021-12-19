@@ -29,6 +29,7 @@ namespace YourTable
 
 
             /*
+             * OG message:
              *Oh no, you've found me! This is not an image file!
              *Well then, you better find the secret code now ;)
              */
@@ -58,7 +59,6 @@ namespace YourTable
         public static void InsertToLog(string msg, string formName) //Insert data to program's log (Appdata)
         {
             string path = localAppData + @"\YT_DATA\program log.txt";
-
             DateTime now = DateTime.Now;
             using (StreamWriter w = File.AppendText(path))
             {

@@ -36,7 +36,6 @@ namespace YourTable
             Stickers s = new Stickers();
             img_sticker.ImageLocation = s.GetRandom();
 
-
             Next();
             jCounter++;
 

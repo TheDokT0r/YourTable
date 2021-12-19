@@ -69,6 +69,7 @@ namespace YourTable
                 Questions q = new Questions();
                 q.Show();
                 Hide();
+                Options.InsertToLog("Program has been opened for the first time!", "Op"); //For debuging
             }
         }
 

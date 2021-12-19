@@ -12,6 +12,8 @@ namespace YourTable
 {
     public partial class BusyHours : Form
     {
+        //Desc: Add hours that cannot be used for a task, as the user has other things to do at that time.
+
         string name;
         int hour1, hour2;
         string occurrence;
@@ -28,7 +30,7 @@ namespace YourTable
 
 
 
-        private void btn_confirm_Click(object sender, EventArgs e)
+        private void btn_confirm_Click(object sender, EventArgs e) //Gets all of the data, converts it to dates, and insert it to the db.
         {
             //lbl_loading.Visible = true;
             string title = "Loading";
@@ -41,7 +43,7 @@ namespace YourTable
             hour2 = int.Parse(txt_hour2.Text);
             dt = dt_date.Value;
 
-            occurrence = lbx_occurrence.SelectedItem.ToString().ToLower(); //Whyyyyyyyyyyyyyyyyyy
+            occurrence = lbx_occurrence.SelectedItem.ToString().ToLower();
 
             List<DateTime> dates = new List<DateTime>();
 
@@ -130,7 +132,7 @@ namespace YourTable
             Hide();
         }
 
-        private void btn_reset_Click(object sender, EventArgs e)
+        private void btn_reset_Click(object sender, EventArgs e) //Removes all of the busy hours from the db (all have id = -100)
         {
             MessageBoxButtons button = new MessageBoxButtons();
 

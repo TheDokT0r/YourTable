@@ -4,3 +4,5 @@
 	   so they would feat with the new data.
 
 -TODO: Use this shit to make a loading screen or something idk: https://www.c-sharpcorner.com/article/async-and-await-in-c-sharp/
+
+-Todo: Finish documentation (Next: Menu.cs)

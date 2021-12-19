@@ -12,6 +12,7 @@ namespace YourTable
 {
     public partial class YourTable : Form
     {
+        //Desc: The info page of the program. contains simple data about the program, and external links.
         public YourTable()
         {
             InitializeComponent();

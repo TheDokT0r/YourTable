@@ -7,6 +7,8 @@ namespace YourTable
 {
     public class Json_File
     {
+        //desc: Library that mannages the user's data file (user_data.json)
+
         static string path;
         int size;
 
@@ -23,7 +25,7 @@ namespace YourTable
             size = arraySize();
         }
 
-        public string ReadQuestion(int num)
+        public string ReadQuestion(int num) //Gets a question about the user (uses to set the users info)
         {
             dynamic array = ReadFile();
 
@@ -45,7 +47,7 @@ namespace YourTable
         //    return question;
         //}
 
-        public List<string> ReadOptions(int num)
+        public List<string> ReadOptions(int num) //Options for answers on the question
         {
             dynamic array = ReadFile();
 
@@ -59,7 +61,7 @@ namespace YourTable
             return strList;
         }
 
-        public int arraySize()
+        public int arraySize() //Gets the size of the json file
         {
             dynamic array = ReadFile();
 
@@ -83,7 +85,7 @@ namespace YourTable
         //    File.WriteAllText(path, output);
         //}
 
-        public void ChangeAnswers(List<string> answers)
+        public void ChangeAnswers(List<string> answers) //Changes the answer of a question in the json file
         {
             dynamic json = ReadFile();
 
@@ -97,7 +99,7 @@ namespace YourTable
             File.WriteAllText(path, output);
         }
 
-        public bool IsOptionsQuestion(int num)
+        public bool IsOptionsQuestion(int num) //Checks if the quesion has options (can see more about it in Questions.cs)
         {
             Json_File j = new Json_File();
 
@@ -111,7 +113,7 @@ namespace YourTable
             return false;
         }
 
-        public string ReadAnswer(string main)
+        public string ReadAnswer(string main) //Reads the answers (user data). Mustly uses to set the users data in User.cs
         {
             dynamic json = ReadFile();
 
@@ -126,7 +128,7 @@ namespace YourTable
             return "null"; //In case didn't find
         }
 
-        public Dictionary<string, string> ReadAllAnswers()
+        public Dictionary<string, string> ReadAllAnswers() //Get a Dictionary of all of the answers given
         {
             var dic = new Dictionary<string, string>();
             dynamic json = ReadFile();
@@ -139,7 +141,7 @@ namespace YourTable
             return dic;
         }
 
-        dynamic ReadFile()
+        dynamic ReadFile() //Reads the file from the path
         {
             string json = File.ReadAllText(path);
             dynamic jsonObj = JsonConvert.DeserializeObject(json);
@@ -147,7 +149,7 @@ namespace YourTable
             return jsonObj;
         }
 
-        public void ResetJson()
+        public void ResetJson() //Resets the user data from the json file (keeps the questions and the answers)
         {
             int length = arraySize();
 

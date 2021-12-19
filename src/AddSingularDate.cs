@@ -10,6 +10,8 @@ using System.Windows.Forms;
 
 namespace YourTable
 {
+    //Desc: Add a singular date to an already existing task (Works from Task_Information.cs)
+
     public partial class AddSingularDate : Form
     {
         int taskID;
@@ -32,7 +34,7 @@ namespace YourTable
             }
         }
 
-        private void btn_Submit_Click(object sender, EventArgs e)
+        private void btn_Submit_Click(object sender, EventArgs e) //Enters the data of the date to the task
         {
             int firstHour = user.HoursOfWork[0], lastHour = user.HoursOfWork[1];
 
@@ -40,7 +42,7 @@ namespace YourTable
             DateTime dt = new DateTime(dt_date.Value.Year, dt_date.Value.Month, dt_date.Value.Day, hour, 0, 0);
 
             DBMannager db = new DBMannager();
-            if(!db.FreeHoursOfTheDay(dt).Contains(dt))
+            if(!db.FreeHoursOfTheDay(dt).Contains(dt)) //Date already in the task
             {
                 MessageBox.Show("Date has already taken, please choose another date/hour", "Error!", MessageBoxButtons.OK);
 
@@ -57,6 +59,11 @@ namespace YourTable
         {
             Options op = new Options();
             op.CloseProgram();
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            Hide();
         }
     }
 }

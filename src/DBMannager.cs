@@ -10,10 +10,13 @@ using System.Data.Common;
 
 namespace YourTable
 {
-    //Shoutout to my man
+    //Based on the SQLite code of:
     //https://youtu.be/U777GVhKUQk
+
     public class DBMannager
     {
+        //desc: A library that mannages the database file (Tasks.db)
+
         string path;
         string cs;
         SQLiteDataReader dr;
@@ -31,7 +34,7 @@ namespace YourTable
         public DBMannager()
         {
             //string localAppData = Environment.GetEnvironmentVariable("LocalAppData");
-            string localAppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string localAppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData); //db is automaticly downloed into the appdata folder
             //path = @"Data Source=.\data\Tasks.db";
             path = @"Data Source = " + localAppData + @"\YT_Data\Tasks.db";
             //cs = @"URI=file:" + @".\data\Tasks.db"; //creates debug folder
@@ -40,7 +43,7 @@ namespace YourTable
             dates = new List<string>();
         }
 
-        public void InsertTask(string name, int timeTakeHours, int priority, string completionDate)
+        public void InsertTask(string name, int timeTakeHours, int priority, string completionDate) //Insets task into the db
         {
             this.name = name;
             this.timeTakeHours = timeTakeHours;
@@ -95,7 +98,7 @@ namespace YourTable
 
 
 
-        public void InsertToSchedule(string name, List<string> dates, int taskID)
+        public void InsertToSchedule(string name, List<string> dates, int taskID) //insets data to the schedule table
         {
             //dates.Add(DateTime.Now.ToString()); //Just for demo...
             this.name = name;
@@ -126,7 +129,7 @@ namespace YourTable
         }
 
 
-        public Dictionary<string, object> GetTaskInDate(DateTime dt) //HOLY FUCKING SHIT IT ACTUALLY WORKS
+        public Dictionary<string, object> GetTaskInDate(DateTime dt) //Get a task from a specific date (including his data)
         {
             using (SQLiteConnection con = new SQLiteConnection(cs))
             using (SQLiteCommand comm = new SQLiteCommand("select * from Schedule where date = @date", con))
@@ -143,7 +146,7 @@ namespace YourTable
                             int priority = GetPriority(Convert.ToInt32(r["taskID"]));
                             DateTime completionDate = GetCompletionDate(Convert.ToInt32(r["taskID"]));
 
-                            Dictionary<string, object> dataDic = new Dictionary<string, object>
+                            Dictionary<string, object> dataDic = new Dictionary<string, object> //Dictionary with the data of the task.
                                 {
                                     { "id", Convert.ToInt32(s["id"]) },
                                     { "name", s["name"].ToString() },
@@ -157,7 +160,7 @@ namespace YourTable
                         }
                     }
 
-                    Dictionary<string, object> nullDic = new Dictionary<string, object>
+                    Dictionary<string, object> nullDic = new Dictionary<string, object> //Returns null in the case of data not found.
                                 {
                                     { "id", null },
                                     { "name", null },
@@ -173,7 +176,7 @@ namespace YourTable
         }
 
 
-        public Dictionary<string, object> GetTaskFromID(int id)
+        public Dictionary<string, object> GetTaskFromID(int id) //Get the task and its data from the ID
         {
             using (SQLiteConnection con = new SQLiteConnection(cs))
             using (SQLiteCommand comm = new SQLiteCommand("select * from TasksData where id = @id", con))
@@ -199,7 +202,7 @@ namespace YourTable
                         }
                     }
 
-                    Dictionary<string, object> nullDic = new Dictionary<string, object>
+                    Dictionary<string, object> nullDic = new Dictionary<string, object> //Returns null in the case of data not found.
                                 {
                                     { "id", null},
                                     { "name", null},
@@ -213,7 +216,7 @@ namespace YourTable
         }
 
 
-        private int GetPriority(int taskID)
+        private int GetPriority(int taskID) //Gets the priority of the task
         {
             int priority = 9;
             using (SQLiteConnection con = new SQLiteConnection(cs))
@@ -285,7 +288,7 @@ namespace YourTable
             return dict;
         }
 
-        public DateTime GetCompletionDate(int taskID)
+        public DateTime GetCompletionDate(int taskID) //Get the completion date of the task
         {
             DateTime completionDate = new DateTime();
             using (SQLiteConnection con = new SQLiteConnection(cs))
@@ -310,7 +313,7 @@ namespace YourTable
         }
 
 
-        public List<DateTime> GetAllDates(int taskID)
+        public List<DateTime> GetAllDates(int taskID) //Get list of all of the dates of the task (using the task ID)
         {
             List<DateTime> dates = new List<DateTime>();
 
@@ -337,7 +340,7 @@ namespace YourTable
 
 
 
-        public void ResetTable(string tableName)
+        public void ResetTable(string tableName) //Resets a specific table and all of its content
         {
             var con = new SQLiteConnection(cs);
             con.Open();
@@ -352,7 +355,7 @@ namespace YourTable
 
 
 
-        public bool IsFullDay(int firstHour, int lastHour, DateTime dt)
+        public bool IsFullDay(int firstHour, int lastHour, DateTime dt) //Check if the day is full
         {
             for (int i = firstHour; i <= lastHour; i++)
             {
@@ -381,7 +384,7 @@ namespace YourTable
         }
 
 
-        public List<DateTime> FreeHoursOfTheDay(DateTime date)
+        public List<DateTime> FreeHoursOfTheDay(DateTime date) //Returns a list with all of the free hours of said day
         {
             var freeHours = new List<DateTime>();
 
@@ -411,7 +414,7 @@ namespace YourTable
         }
 
 
-        public Queue<int> GetAllTaskIDs()
+        public Queue<int> GetAllTaskIDs() //Returns a queue list of all of the taskIDs
         {
             Queue<int> ids = new Queue<int>();
 
@@ -432,7 +435,7 @@ namespace YourTable
             return ids;
         }
 
-        public void DeleteTask(int taskID)
+        public void DeleteTask(int taskID) //Delete a specific task form the db (both Schedule table and task table) (deletes from schedule in the next func below)
         {
             var con = new SQLiteConnection(cs);
             con.Open();
@@ -500,10 +503,10 @@ namespace YourTable
         }
 
 
-        public void DeleteBusyHours()
+        public void DeleteBusyHours() //Remvoe all of the busy hours from the Schedule table
         {
             using (var con = new SQLiteConnection(cs))
-            using (var comm = new SQLiteCommand("DELETE FROM Schedule WHERE taskID = -100", con))
+            using (var comm = new SQLiteCommand("DELETE FROM Schedule WHERE taskID = -100", con)) //All of the busy hours has the id of -100 by default
             {
                 con.Open();
                 comm.ExecuteNonQuery();

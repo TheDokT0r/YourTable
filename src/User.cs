@@ -16,7 +16,7 @@ namespace YourTable
         public bool WorkInWeekends { get; }
 
 
-        /*Shoutout to those amzing researchers
+        /*Shoutout to those amzing researchers (based the data of my program on their resarch)
         *https://www.verywellhealth.com/how-much-sleep-does-your-teen-need-2606870
         *https://www.cdc.gov/sleep/about_sleep/how_much_sleep.html
         */

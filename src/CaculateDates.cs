@@ -10,6 +10,9 @@ namespace YourTable
     //TODO: Run a debug on the entire thing (catch the error from last time)
     public class CaculateDates
     {
+        //Desc: Gets the best timing to put the task in. Uses an alrogirthm that separets the datse into different lists of free dates.
+        //Would choose the best dates by the priority of the list they're in.
+
         string name;
         int timeTakeHours;
         int priority;
@@ -77,7 +80,7 @@ namespace YourTable
             return finalHours;
         }
 
-        private List<DateTime> FindAllFreeTimes()
+        private List<DateTime> FindAllFreeTimes() //Finds all of the free hours
         {
             DBMannager db = new DBMannager();
 
@@ -119,8 +122,7 @@ namespace YourTable
 
 
 
-        //Shoutout to ma man: https://www.swinburneonline.edu.au/faqs/how-many-hours-of-study-per-week-are-recommended-per-unit
-        private List<DateTime> StudyEachWeek(List<DateTime> dt) //8 hours a week on a subject
+        private List<DateTime> StudyEachWeek(List<DateTime> dt) //8 hours a week on a subject (Early idea. Put on hold for now)
         {
             return null; //Do nothing for now
         }
@@ -185,7 +187,7 @@ namespace YourTable
         }
 
 
-        private int TimeOfDay(DateTime dt) //Check what time of the day a date is
+        private int TimeOfDay(DateTime dt) //Gets the time of day(morning, afternoon, evening)
         {
             int hour = dt.Hour;
 
@@ -301,11 +303,11 @@ namespace YourTable
             return newDtList;
         }*/
 
-        private List<DateTime> AddRemoveExtraHours(List<DateTime> prefarableDates, List<DateTime> extraDates, int taskHoursNeeded)
+        private List<DateTime> AddRemoveExtraHours(List<DateTime> prefarableDates, List<DateTime> extraDates, int taskHoursNeeded) //Removes or add dates accurding to the amount of dates to the list, compared to the amount of hours needed
         {
             if (extraDates.Count + prefarableDates.Count < taskHoursNeeded)
             {
-                string message = "It seems like you don't have enough time left to complete this task!";
+                string message = "It seems like you don't have enough time left to complete this task! The task would still be uploaded to your task list, but it wouldn't have enough hours to feel all of your task needs.";
                 string title = "Error";
 
                 MessageBox.Show(message, title, MessageBoxButtons.OK);

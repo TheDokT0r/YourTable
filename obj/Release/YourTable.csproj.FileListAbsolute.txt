@@ -33,3 +33,6 @@ E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Release\YourTable.Calender.r
 E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Release\YourTable.TasksList.resources
 E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Release\YourTable.Task_Information.resources
 E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Release\YourTable.Timetable.resources
+E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Release\YourTable.YourTable.resources
+E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Release\YourTable.AddSingularDate.resources
+E:\GHIS\Computer Science\IA\YourTable\YourTable\obj\Release\YourTable.csprojAssemblyReference.cache

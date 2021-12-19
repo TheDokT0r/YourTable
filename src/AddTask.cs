@@ -12,6 +12,8 @@ namespace YourTable
 {
     public partial class AddTask : Form
     {
+        //Desc: Add tasks to the program (FrontEnd back of the program. Backend can be found in DBMannager.cs and CaculateDates.cs)
+
         public AddTask()
         {
             InitializeComponent();
@@ -34,23 +36,23 @@ namespace YourTable
             Hide();
         }
 
-
-        private void img_sticker_Click(object sender, EventArgs e)
+        
+        private void img_sticker_Click(object sender, EventArgs e) //Don't like the sticker? Get a new one!
         {
             Stickers s = new Stickers();
             img_sticker.ImageLocation = s.GetRandom();
         }
 
 
-        private void btn_done_Click(object sender, EventArgs e)
+        private void btn_done_Click(object sender, EventArgs e) //Done with the task. Moves the data to the backend.
         {
             string name = TaskName;
             int hoursForCompletion = HoursForCompletion;
             int priority = Priority;
             string date = new DateTime(Date.Year, Date.Month, Date.Day, Hour, 0, 0).ToString();
 
-            DBMannager task = new DBMannager();
-            task.InsertTask(name, hoursForCompletion, priority, date);
+            DBMannager db = new DBMannager();
+            db.InsertTask(name, hoursForCompletion, priority, date);
 
             if (CheckErrors(name, hoursForCompletion, priority, date))
             {
@@ -65,7 +67,7 @@ namespace YourTable
 
 
 
-        bool CheckErrors(string name, int hour, int priority, string date)
+        bool CheckErrors(string name, int hour, int priority, string date) //As the name suggests, check for errors in the data.
         {
             List<string> errors = new List<string>();
 
@@ -102,24 +104,29 @@ namespace YourTable
         }
 
 
-
+        //The name of the task
         private string TaskName
         {
             get { return txt_name.Text; }
         }
 
 
-
+        //Amount of hours for completion
         private int HoursForCompletion
         {
             get
             {
-                return cmb_hour.SelectedIndex + 7;
+                if (int.TryParse(txt_hours.Text, out int hour))
+                {
+                    return hour;
+                }
+
+                return -1; //returns an error
             }
         }
 
 
-
+        //The priority of the task
         private int Priority
         {
             get
@@ -141,22 +148,23 @@ namespace YourTable
         }
 
 
-
+        //The date of completion
         private DateTime Date
         {
             get { return dt_complition.Value; }
         }
 
+        //The hour of completion
         private int Hour
         {
             get
             {
-                if (int.TryParse(txb_hour.Text, out int hour))
+                if(cmb_hour.SelectedIndex + 8 == 24) //If it's midnight (prevent error)
                 {
-                    return hour;
+                    return 0;
                 }
 
-                return -1; //would throw an error
+                return cmb_hour.SelectedIndex + 8;
             }
         }
 
@@ -168,7 +176,7 @@ namespace YourTable
             options.CloseProgram();
         }
 
-        void Test()
+        void Test() //TODO: Remove (debug)
         {
             DBMannager db = new DBMannager();
         }

@@ -1,4 +1,6 @@
 # YourTable
+## Warning!
+This application is depricated and wouldn't be maintained. The app is free and open source under the GPL 3.0 license. You may fork this program/use it as you may wish!
 
 ## About
 YourTable was created as an Internal Assesment project for Computer Science as part of the International Baccalaureate program. This program wasn't meant to be sold and wasn't created for any monitary reasons
@@ -16,6 +18,3 @@ program, I'm sorry to tell you but you've got scammed... f in the chat).
 
 ## Capability
 Version 1.0 "Heros" is a Windows application for 64 bits machines.
-
-## Link to download
-Not out yet!
